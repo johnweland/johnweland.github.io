@@ -9054,11 +9054,14 @@ footer {
   .main-header h1 {
     margin-top: auto;
     color: #ffffff;
-    font-size: 5em;
+    font-size: 10vw;
     font-style: italic;
     font-style: bold;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5; }
+    @media (min-width: 769px) {
+      .main-header h1 {
+        font-size: 5vw; } }
   .main-header a {
     margin-top: auto;
     font-size: 3em;
