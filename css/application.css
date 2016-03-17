@@ -9171,7 +9171,8 @@ div.chart {
   justify-content: center;
   position: relative;
   width: 120px;
-  height: 120px; }
+  height: 120px;
+  margin: .5em .5em 0 0; }
 
 .chart canvas {
   display: block;
