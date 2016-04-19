@@ -9192,4 +9192,29 @@ div.chart {
   border-radius: 10px;
   border: 1px solid #d5d5d5; }
 
+.portfolio__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+
+.portfolio__item {
+  padding: .5em;
+  margin: .5em;
+  max-width: 250px;
+  flex: 1 0 auto;
+  border: 1px solid #d5d5d5;
+  display: flex;
+  flex-direction: column; }
+
+.item__name {
+  width: 100%;
+  text-align: center; }
+
+.item__name a {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.item__language, .item__description {
+  font-size: .75em; }
+
 /*# sourceMappingURL=application.css.map */

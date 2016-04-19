@@ -1,0 +1,1246 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"por",
+				"portfolio__item"
+			],
+			[
+				"p",
+				"portfolio"
+			],
+			[
+				"flex",
+				"flex-direction"
+			],
+			[
+				"array_key",
+				"array_key_exists"
+			],
+			[
+				"retur",
+				"returnValue"
+			],
+			[
+				"has",
+				"hasPermission"
+			],
+			[
+				"or",
+				"orginalval"
+			],
+			[
+				"use",
+				"username"
+			],
+			[
+				"da",
+				"dataObject"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"data",
+				"dataObject"
+			],
+			[
+				"site",
+				"siteSelected"
+			],
+			[
+				"change",
+				"changeSiteInput"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"JS",
+				"jsonify	Jekyll"
+			],
+			[
+				"JSN",
+				"json_encode"
+			],
+			[
+				"JSON",
+				"json_encode"
+			],
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"re",
+				"response"
+			],
+			[
+				"update",
+				"updateUserSites"
+			],
+			[
+				"error",
+				"errorThrown"
+			],
+			[
+				"password",
+				"oci_password_change"
+			],
+			[
+				"con",
+				"confirmUserPassword"
+			],
+			[
+				"key",
+				"keyup"
+			],
+			[
+				"has_",
+				"has_role"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"mod",
+				"modal__inner"
+			],
+			[
+				"modal",
+				"modal"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"to",
+				"toLowerCase"
+			],
+			[
+				"ve",
+				"vertical-align"
+			],
+			[
+				"h",
+				"h	<h1> - <h6>"
+			],
+			[
+				"html",
+				"html5	Simple HTML5 Boilerplate"
+			],
+			[
+				"ht",
+				"html	html"
+			],
+			[
+				"org",
+				"organization"
+			],
+			[
+				"is",
+				"is_api"
+			],
+			[
+				"box-",
+				"box-sizing"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"search",
+				"searchValue"
+			],
+			[
+				"query",
+				"queryUsername"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"dis",
+				"disabled-column"
+			],
+			[
+				"disa",
+				"disabled"
+			],
+			[
+				"do",
+				"documentready"
+			],
+			[
+				"t",
+				"Table"
+			],
+			[
+				"block",
+				"blockquote"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"cu",
+				"current-view"
+			],
+			[
+				"a",
+				"addClass"
+			],
+			[
+				"current",
+				"currentView"
+			],
+			[
+				"for",
+				"formatted_address"
+			],
+			[
+				"get",
+				"getCoodinates"
+			],
+			[
+				"geo",
+				"geometry"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"coo",
+				"coordinates"
+			],
+			[
+				"cood",
+				"coords_obj"
+			],
+			[
+				"erts",
+				"ertsTable"
+			],
+			[
+				"todo",
+				"todos"
+			],
+			[
+				"M",
+				"model"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"down",
+				"downList"
+			],
+			[
+				"de",
+				"details	<details>"
+			],
+			[
+				"table",
+				"tableName"
+			],
+			[
+				"colla",
+				"collapse__body"
+			],
+			[
+				"backgroun",
+				"background-image"
+			],
+			[
+				"footer",
+				"footer__meta"
+			],
+			[
+				"text-",
+				"text-align-last"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"host",
+				"hostDetails"
+			],
+			[
+				"toggl",
+				"toggleClass"
+			],
+			[
+				"toggle",
+				"toggleClass"
+			],
+			[
+				"collap",
+				"collapse"
+			],
+			[
+				"co",
+				"collapse__header"
+			],
+			[
+				"hea",
+				"header	<header>"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"text",
+				"text-align-last"
+			],
+			[
+				"no",
+				"notice__message"
+			],
+			[
+				"notice",
+				"notice__icon"
+			],
+			[
+				"ex",
+				"extend"
+			],
+			[
+				"time",
+				"timeout	setTimeout function"
+			],
+			[
+				"snack",
+				"Snackbar"
+			],
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"fo",
+				"fountain-blue"
+			],
+			[
+				"remov",
+				"removeClass"
+			],
+			[
+				"not",
+				"notification__icon"
+			],
+			[
+				"sel",
+				"selectAll"
+			],
+			[
+				"s",
+				"search"
+			],
+			[
+				"all",
+				"allowSelectAll"
+			],
+			[
+				"st",
+				"statusCol"
+			],
+			[
+				"sta",
+				"statusCol"
+			],
+			[
+				"pr",
+				"process"
+			],
+			[
+				"ack",
+				"ackCol"
+			],
+			[
+				"ty",
+				"typeCol"
+			],
+			[
+				"pro",
+				"processCol"
+			],
+			[
+				"status",
+				"statusInputOK"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"fa",
+				"fa-stack"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"fle",
+				"flex-direction"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"alig",
+				"align-items"
+			],
+			[
+				"R",
+				"refreshRate"
+			],
+			[
+				"aja",
+				"ajaxEnable"
+			],
+			[
+				"refresh",
+				"refreshTimer"
+			],
+			[
+				"uptime",
+				"uptimedata"
+			],
+			[
+				"strto",
+				"strtotime"
+			],
+			[
+				"mari",
+				"margin-left"
+			],
+			[
+				"select",
+				"select-column"
+			],
+			[
+				"event",
+				"eventid"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"even",
+				"event_id"
+			],
+			[
+				"color",
+				"color-primary"
+			],
+			[
+				"checked",
+				"checkedColumn"
+			],
+			[
+				"dia",
+				"dialog__header"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"ali",
+				"align-items"
+			],
+			[
+				"scroll",
+				"scrollTop"
+			],
+			[
+				"marign",
+				"margin-bottom"
+			],
+			[
+				"with",
+				"width"
+			],
+			[
+				"ac",
+				"Acknowledged"
+			],
+			[
+				"url",
+				"url-column"
+			],
+			[
+				"colo",
+				"color-primary"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"note",
+				"note_type_id"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "js/application.js",
+			"settings":
+			{
+				"buffer_size": 2549,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/github.min.js",
+			"settings":
+			{
+				"buffer_size": 641,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 5153,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sass/modules/_portfolio.scss",
+			"settings":
+			{
+				"buffer_size": 290,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sass/modules/_panel.scss",
+			"settings":
+			{
+				"buffer_size": 76,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sass/modules/_index.scss",
+			"settings":
+			{
+				"buffer_size": 1144,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "Package Control: insta",
+		"selected_items":
+		[
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: di",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"sublime.log_input(True)",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/js",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/sass",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/sass/modules"
+	],
+	"file_history":
+	[
+		"/C/environments/scotch-box/Vagrantfile",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/htdocs/users.php.dev-notes",
+		"/C/bzr/enf/php/feature/61133-global-numbers-null-elementID/include/class_utils.php",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/include/models/class_callSearchModel.php",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/include/class_cdrshare.php",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/include/class_pdo_wrapper.php",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/include/class_actioncontroller.php",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/htdocs/css/users.css",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/templates/users.tpl",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/templates/user_search.tpl",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/htdocs/js/userpage.js",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/templates/user_edit.tpl",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/ChangeLog",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/include/models/class_usersModel.php",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/include/class_user.php",
+		"/C/Users/jweland.ICS/AndroidStudioProjects/RecipeDemo/README.md",
+		"/C/Users/jweland.ICS/AppData/Roaming/postgresql/pgpass.conf",
+		"/C/Users/jweland.ICS/AppData/Roaming/postgresql/pg_service.conf",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/htdocs/css/password_change.css",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/htdocs/js/password_change.js",
+		"/C/Users/jweland.ICS/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/htdocs/call_search.php",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/include/class_callrecords.php",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/templates/call_search.tpl",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/htdocs/call_search_ajax.php",
+		"/C/Users/jweland.ICS/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/htdocs/users_select.php",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/htdocs/users_search.php",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/htdocs/users_edit.php",
+		"/C/bzr/erts/feature/multi-select/htdocs/js/dashboard/search.js",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/htdocs/js/users.js",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/.bzrignore",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/htdocs/users.php",
+		"/C/bzr/erts/feature/multi-select/htdocs/js/application.js",
+		"/C/bzr/erts/feature/multi-select/htdocs/ajax.php",
+		"/C/bzr/erts/feature/multi-select/htdocs/js/dashboard/datatables-setup.js",
+		"/C/bzr/erts/feature/multi-select/include/erts.php",
+		"/C/bzr/erts/feature/multi-select/include/ertsClass.php",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/htdocs/users_edit.js",
+		"/C/bzr/erts/feature/multi-select/htdocs/sass/modules/_tables.scss",
+		"/C/bzr/erts/feature/multi-select/templates/dashboardsearch.tpl",
+		"/C/bzr/erts/feature/multi-select/templates/settings.tpl",
+		"/C/bzr/erts/feature/multi-select/ChangeLog",
+		"/C/Users/jweland.ICS/Pictures/index.html",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/htdocs/dbinfo.php",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/htdocs/listen_queue_data.php",
+		"/C/bzr/enf/php/feature/rm1526-rewrite-userscreen/templates/call_report.tpl",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/public/templates/todo.html",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/index.html",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/sass/modules/_progress.scss",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/.gitignore",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/data/manifest.json",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/sass/utilities/_config.scss",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/sass/layout/_header.scss",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/CNAME",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/sass/layout/_containers.scss",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/sass/layout/_footer.scss",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/sass/base/_base.scss",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/sass/modules/_index.scss",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/sass/modules/_panel.scss",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/sass/layout/_index.scss",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/css/application2.css",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/sass/utilities/_helpers.scss",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/js/application.js",
+		"/C/Users/jweland.ICS/Documents/projects/junk/css/application.css",
+		"/C/Users/jweland.ICS/Documents/projects/junk/js/application.js",
+		"/C/Users/jweland.ICS/Documents/projects/junk/index.html",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/css/circle.css",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016(redeux)/css/application.css",
+		"/C/Users/jweland.ICS/Documents/projects/dotMe2016 (redeux)/index.html",
+		"/C/bzr/erts/feature/multi-select/htdocs/sass/modules/_nav.scss",
+		"/C/bzr/erts/feature/multi-select/htdocs/sass/modules/_toolbar.scss",
+		"/C/bzr/erts/feature/multi-select/htdocs/sass/modules/_collapse.scss",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/app/scripts/controllers/todo.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/app/scripts/services/data.js",
+		"/C/Users/jweland.ICS/Documents/projects/homehub/sass/modules/_index.scss",
+		"/C/Users/jweland.ICS/Documents/projects/homehub/sass/utilities/_config.scss",
+		"/C/Users/jweland.ICS/Documents/projects/weather-service/js/application.js",
+		"/C/Users/jweland.ICS/Documents/projects/weather-service/sass/modules/_drawer.scss",
+		"/C/Users/jweland.ICS/Documents/projects/weather-service/index.html",
+		"/C/Users/jweland.ICS/Documents/projects/weather-service/.gitignore",
+		"/C/Users/jweland.ICS/Documents/projects/homehub/.gitignore",
+		"/C/Users/jweland.ICS/Documents/projects/homehub/main.html",
+		"/C/Users/jweland.ICS/Documents/projects/weather-service/sass/modules/_index.scss",
+		"/C/Users/jweland.ICS/Documents/projects/homehub/js/application.js",
+		"/C/Users/jweland.ICS/Documents/projects/homehub/sass/modules/_drawer.scss",
+		"/C/bzr/erts/feature/multi-select/htdocs/sass/utilities/_config.scss",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/src/api/index.js",
+		"/C/bzr/erts/feature/multi-select/htdocs/js/dashboard/dashboard-setup.js",
+		"/C/Users/jweland.ICS/Documents/projects/weather-service/sass/modules/_headlines.scss",
+		"/C/Users/jweland.ICS/Documents/projects/weather-service/sass/layout/_containers.scss",
+		"/C/Users/jweland.ICS/Documents/projects/weather-service/sass/modules/_weather.scss",
+		"/C/Users/jweland.ICS/Documents/projects/weather-service/css/weather-icons.css",
+		"/C/Users/jweland.ICS/Documents/projects/weather-service/sass/base/_font.scss",
+		"/C/Users/jweland.ICS/Documents/projects/weather-service/css/application.css",
+		"/C/Users/jweland.ICS/Documents/projects/weather-service/css/weather-icons-wind.css",
+		"/C/bzr/erts/feature/multi-select/htdocs/js/note/search.js",
+		"/C/Users/jweland.ICS/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/jweland.ICS/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/jweland.ICS/Documents/projects/weather-service/js/auth.js",
+		"/C/Users/jweland.ICS/Documents/projects/weather-service/README.md",
+		"/C/Users/jweland.ICS/Documents/projects/homehub/js/auth.js",
+		"/C/bzr/enf/php/feature/61133-global-numbers-null-elementID/htdocs/dbinfo.php",
+		"/C/bzr/enf/php/feature/61133-global-numbers-null-elementID/ChangeLog",
+		"/C/bzr/enf/php/feature/61133-global-numbers-null-elementID/htdocs/js/global_numbers_edit.js",
+		"/C/bzr/enf/php/feature/61133-global-numbers-null-elementID/htdocs/js/call_number_detail.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo2/app/scripts/controllers/todo.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo2/src/seed.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo2/src/api/index.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo2/src/database.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/src/database.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/src/models/todo.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo2/src/models/todo.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/src/seed.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/src/app.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/app/scripts/controllers/main.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/mongo.cfg",
+		"/C/Program Files/MongoDB/Server/3.2/README",
+		"/C/Program Files/MongoDB/Server/3.2/mongo.cfg",
+		"/H/.ssh/id_rsa.pub",
+		"/C/bzr/erts/feature/multi-select/htdocs/index.php",
+		"/C/bzr/erts/feature/multi-select/templates/serverdownlist.tpl",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/public/index.html",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/webpack.config.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/app/scripts/directives/todo.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/public/scripts/todo.bundle.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/app/app.js",
+		"/C/Users/jweland.ICS/Documents/projects/mean-todo/package.json"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\bzr\\enf\\php\\feature\\rm1526-rewrite-userscreen",
+			"C:\\bzr\\erts\\feature\\multi-select",
+			"C:\\bzr\\enf\\php\\feature\\rm1526-rewrite-userscreen",
+			"C:\\Users\\jweland.ICS\\Documents\\projects\\weather-service\\sass",
+			"C:\\bzr\\erts\\feature\\multi-select",
+			"C:\\Users\\jweland.ICS\\Documents\\projects\\mean-todo",
+			"C:\\bzr\\erts\\feature\\multi-select",
+			"C:\\Users\\jweland.ICS\\Documents\\projects\\erts (redeux)"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"json_encode",
+			"users.js",
+			"userpage.js",
+			"role",
+			"info_msg_object",
+			"current_user",
+			"setPassword",
+			"role",
+			"begin",
+			"transaction",
+			"PDO::",
+			"transaction",
+			"force",
+			"forcepassword",
+			"pass",
+			"$9",
+			"['",
+			"responseText",
+			"data",
+			"message",
+			"data",
+			"site",
+			"modalToggle",
+			"site",
+			";\n",
+			"}\" ",
+			"role_list",
+			"hide",
+			"<?php",
+			"<?php ",
+			"ui-icon",
+			"descrip",
+			"$smart",
+			";\n",
+			"txt",
+			"_GET",
+			"assign",
+			"{if isset",
+			"default",
+			"loadTable",
+			"ajax.reload",
+			"loadTable",
+			"draw",
+			"function query",
+			"query",
+			"draw",
+			"documentReady",
+			"draw",
+			"fetch",
+			";\n",
+			"$iActive",
+			"getResults",
+			"hostDetails",
+			"demo",
+			"editable",
+			"{$disableUi}",
+			"{$",
+			"{$disableUi}",
+			"$settings",
+			"$settingsd",
+			"Ui",
+			"disable",
+			"iDis",
+			"css",
+			".css",
+			"defaultAction",
+			".css",
+			" $",
+			"auth",
+			".tpl",
+			"actionController",
+			"&amp;",
+			"subject",
+			"());",
+			"JavaScript",
+			"(\"\");\n",
+			"secondary",
+			"primary",
+			"grey",
+			"h1",
+			".wi-day",
+			"\").",
+			"#selectAll",
+			"select",
+			"\"]);",
+			"attr",
+			"\"]);\n",
+			"erts.refresh",
+			"Failure",
+			".export",
+			".find(",
+			"gIdSitePopup",
+			"addsite_popup",
+			"ajax.php?a",
+			"responsive",
+			"documentReady",
+			"shift",
+			".push",
+			"Math.random",
+			"label",
+			"notice",
+			"Notice",
+			"notice",
+			"Notice",
+			"notice",
+			"Notice",
+			"notice",
+			"\"],",
+			"status",
+			"up",
+			"location.reload();",
+			"refresh",
+			"ajax.php?a=pinnedEntities",
+			"pin",
+			"dialog(",
+			"dialog()",
+			"setC",
+			"setClear",
+			".ui-dialog",
+			".dialog",
+			"chkboxes",
+			";\n",
+			"note_timestamp:",
+			"username:",
+			"note:",
+			"note_type:",
+			"msg",
+			"entity_name"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"name\":",
+			"\"NO NOTE\"",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "js/application.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2549,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2492,
+								2164
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/github.min.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 641,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								427,
+								427
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5153,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2609,
+								2609
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sass/modules/_portfolio.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								169,
+								169
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sass/modules/_panel.scss",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 76,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								74,
+								32
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sass/modules/_index.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1134,
+								1134
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 151.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "dotme.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"call_search",
+				"htdocs\\call_search_ajax.php"
+			],
+			[
+				"pod",
+				"include\\class_pdo_wrapper.php"
+			],
+			[
+				"classuse",
+				"include\\class_user.php"
+			],
+			[
+				"class_u",
+				"61133-global-numbers-null-elementID\\include\\class_utils.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 279.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

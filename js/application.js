@@ -73,5 +73,14 @@ $('.chart').each(function () {
 	span.style.color = color;
 	drawCircle('#efefef', options.lineWidth, 100 / 100);
 	drawCircle(color, options.lineWidth, options.percent / 100);
+});
 
+$.fn.extend({
+	portfolio: function() {
+		github.load('johnweland');	
+	}
+});
+
+$(document).ready(function(){
+	$('#portfolio .portfolio__container').portfolio();
 });
