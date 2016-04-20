@@ -9206,6 +9206,12 @@ div.chart {
   display: flex;
   flex-direction: column; }
 
+.portfolio__item:first-child {
+  margin-left: 0; }
+
+.portfolio__item:last-child {
+  margin-right: 0; }
+
 .item__name {
   width: 100%;
   text-align: center; }
