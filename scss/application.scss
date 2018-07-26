@@ -46,7 +46,7 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 90px);
 
   .icons {
     margin-top: 1rem;
@@ -162,11 +162,25 @@ main {
 }
 
 #main-footer {
-  text-align: center;
-  padding: 1rem;
-  background: darken($primary-color, 10);
-  color: set-text-color($primary-color);
-  height: 60px;
+  & .copyright {
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    color: set-text-color($primary-color);
+    height: 60px;
+  }
+  & .doing {
+    display: flex;
+    padding: 0.5rem;
+    background: darken($primary-color, 5);
+    color: set-text-color($primary-color);
+    height: 30px;
+    line-height: 1;
+    font-size: 0.75rem;
+    & :last-child {
+      margin-left: auto;
+    }
+  }
 }
 
-@import "mobile";
+@import "responsive";
