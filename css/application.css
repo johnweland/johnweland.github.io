@@ -100,19 +100,23 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
-  body#bg-img .v-header {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -1; }
-    body#bg-img .v-header .fullscreen-video-wrap {
-      max-height: 100vh;
-      overflow: hidden; }
-      body#bg-img .v-header .fullscreen-video-wrap video {
-        max-height: 100%; }
+  body#bg-img {
+    background: url(../img/background.png);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img .v-header {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: -1; }
+      body#bg-img .v-header .fullscreen-video-wrap {
+        max-height: 100vh;
+        overflow: hidden; }
+        body#bg-img .v-header .fullscreen-video-wrap video {
+          max-height: 100%; }
 
 h1,
 h2,
