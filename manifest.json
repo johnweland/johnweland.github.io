@@ -23,7 +23,7 @@
         "sizes": "512x512"
       }
     ],
-    "start_url": "johnweland.me",
+    "start_url": "https://johnweland.me",
     "background_color": "#aa0000",
     "display": "standalone",
     "scope": "/",
