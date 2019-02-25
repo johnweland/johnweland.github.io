@@ -14,10 +14,8 @@ const cacheAssets = [
     'img/background.webp',
     'img/portrait.webp',
     'img/portrait2.webp',
-    'https://use.fontawesome.com/98cf067160.css',
     'https://use.fontawesome.com/releases/v4.7.0/css/font-awesome-css.min.css',
-    'https://use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.woff2',
-    'https://use.fontawesome.com/98cf067160.js'
+    'https://use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.woff2'
 ];
 
 self.addEventListener('install', (event) => {
