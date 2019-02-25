@@ -3,22 +3,22 @@
     "name": "John Weland [dot] Me",
     "icons": [
       {
-        "src": "img/icon-128.jpg",
+        "src": "img/icon-128.png",
         "type": "image/png",
         "sizes": "128x128"
       },
       {
-        "src": "img/icon-192.jpg",
+        "src": "img/icon-192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "img/icon-256.jpg",
+        "src": "img/icon-256.png",
         "type": "image/png",
         "sizes": "256x256"
       },
       {
-        "src": "img/icon-512.jpg",
+        "src": "img/icon-512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
