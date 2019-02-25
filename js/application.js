@@ -24,3 +24,14 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('../sw.js', {scope: './'})
+    .then(function(registration) {
+      console.log("Service Worker Registered", registration);
+    })
+    .catch(function(err) {
+      console.log("Services Worker Failed to Register", err);
+    })
+}

@@ -1,0 +1,21 @@
+{
+    "short_name": "JohnWeland.me",
+    "name": "John Weland [dot] Me",
+    "icons": [
+      {
+        "src": "/img/portrait2.jpg",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/img/portrait.jpg",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "https://johnweland.me",
+    "background_color": "#a00",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#a00"
+  }
