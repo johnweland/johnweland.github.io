@@ -26,12 +26,14 @@ function toggleMenu() {
 }
 
 if('serviceWorker' in navigator) {
-  navigator.serviceWorker
-    .register('../sw.js', {scope: './'})
-    .then(function(registration) {
-      console.log("Service Worker Registered", registration);
-    })
-    .catch(function(err) {
-      console.log("Services Worker Failed to Register", err);
-    })
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('../sw.js')
+      .then((registration) => {
+        console.log("Service Worker: Registered", registration);
+      })
+      .catch((error) => {
+        console.log(`Service Worker: Error: ${error}`);
+      })
+  })
 }

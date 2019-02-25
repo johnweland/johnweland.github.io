@@ -1,4 +1,4 @@
-let cacheName = 'v3';
+let cacheName = 'v1';
 
 let cacheFile = [
     './css/application.css',
@@ -7,13 +7,19 @@ let cacheFile = [
     './contact.html',
     './work.html',
     './js/application.js',
-    './img/*.png',
+    './img/icon-128.png',
+    './img/icon-192.png',
+    './img/icon-256.png',
+    './img/icon-512.png',
+    './img/background.webp',
+    './img/portrait.webp',
+    './img/portrait2.webp'
 ]
 
-self.addEventListener('install', (e) => {
+self.addEventListener('install', (event) => {
     console.log(`[ServiceWorker] Installed`);
 
-    e.waitUntil(
+    event.waitUntil(
         caches.open(cacheName).then((cache) => {
             console.log(`[ServiceWorker] Caching cacheFiles`);
             return cache.addAll(cacheFile);
@@ -24,10 +30,10 @@ self.addEventListener('install', (e) => {
 
 })
 
-self.addEventListener('activate', (e) => {
+self.addEventListener('activate', (event) => {
     console.log(`[ServiceWorker] Activated`);
 
-    e.waitUntil(
+    event.waitUntil(
         caches.keys().then((cacheNames) => {
             return Promise.all(cacheNames.map((thisCacheName) => {
                 if (thisCacheName !== cacheName) {
@@ -41,13 +47,13 @@ self.addEventListener('activate', (e) => {
     );
 })
 
-self.addEventListener('fetch', (e) => {
-    console.log("[ServiceWorker] Fetching", e.request.url);
+self.addEventListener('fetch', (event) => {
+    console.log("[ServiceWorker] Fetching", event.request.url);
 
-    e.respondWith(
+    event.respondWith(
         caches.match(e.request).then((response) => {
             if (response) {
-                console.log(`[ServiceWorker] Found in cache ${e.request.url}`);
+                console.log(`[ServiceWorker] Found in cache ${event.request.url}`);
                 return response;
             }
 
@@ -58,14 +64,14 @@ self.addEventListener('fetch', (e) => {
                         console.log(`[ServiceWorker] No Response from fetch`);
                         return response;
                     }
-                    let responseClone = e.response.clone();
+                    let responseClone = event.response.clone();
                     caches.open(cacheName).then((cache) => {
-                        cache,put(e.request, responseClone);
+                        cache.put(event.request, responseClone);
                         return response;
                     });
                 })
         }).catch((error) => {
-            console.log(`[ServiceWorker] Error fething and caching new details`, error);
+            console.log(`[ServiceWorker] ${error}`);
         })
     )
 });
