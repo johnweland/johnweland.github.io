@@ -1,4 +1,4 @@
-let cacheName = 'v2';
+let cacheName = 'v3';
 
 let cacheFile = [
     './css/application.css',
