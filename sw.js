@@ -13,9 +13,7 @@ const cacheAssets = [
     'img/icon-512.png',
     'img/background.webp',
     'img/portrait.webp',
-    'img/portrait2.webp',
-    'https://use.fontawesome.com/releases/v4.7.0/css/font-awesome-css.min.css',
-    'https://use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.woff2'
+    'img/portrait2.webp'
 ];
 
 self.addEventListener('install', (event) => {
