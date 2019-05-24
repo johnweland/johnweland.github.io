@@ -1,0 +1,25 @@
+---
+layout: default
+description: A place to look up posts by tag.
+---
+
+<section>
+    <div class="container">
+        <h1 class="lg-heading">View By <span class="text-secondary">Tag</span></h1>
+        <h2 class="sm-heading">Tag you're it...</h2>
+        {% for tag in site.tags %}
+        <h3 id="{{ tag[0] }}">{{ tag[0] | capitalize }}</h3>
+        <ul class="archive__list">
+            {% for post in tag[1] %}
+            <li>
+                [<a href="{{ site.baseurl }}/articles/categories/#{{ post.category }}">{{ post.category }}</a>]
+                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                {% if post.comments %} 
+                &centerdot; <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">Join the Discussion</a>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+</section>

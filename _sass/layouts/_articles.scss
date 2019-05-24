@@ -1,0 +1,40 @@
+.article {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2rem;
+    &__title {
+        font-size: 3rem;
+        & a {
+            color: set-text-color($primary-color);
+        }
+    }
+    &__subtitle {
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 1rem;
+    }
+    &__meta {
+        display: flex;
+        align-items: center;
+        font-size: .85rem;
+        & a {
+            margin: 0 .2rem;
+        }
+    }
+
+    & a.tag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        padding: .2rem;
+        margin:0 .2rem;
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        border-radius: 5px;
+    }
+}
+
+.archive__list {
+    padding: 0;
+    margin: 0 0 2rem 0;
+    list-style: none;
+}

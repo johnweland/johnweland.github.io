@@ -1,0 +1,38 @@
+---
+layout: default
+description: An archive of all posts.
+---
+<section>
+    <div class="container">
+        <h1 class="lg-heading">Things I <span class="text-secondary">Write</span></h1>
+        <h2 class="sm-heading">Occasionally I write...</h2>
+        <div class="grid-1-over-2">
+            <h2 class="text-secondary">Whats all this about?</h2>
+            <p>I occasionally write about the things I do &amp; experiance in the work place. Maybe it is a quick post explaining a neat feature I found in a bit of software that makes life easier. Or perhapse an explaination of snippet of code I wrote. It might even be it about adapting to challenges or battling imposter syndrome.</p>
+            <p>Below are some of my most recent posts or you can browse the <a href="{{ site.baseurl }}/articles/archives">archives</a> to dig further back. I try to spellcheck my work but don't always catch it. Sometimes my fingers type faster than my brain is processing, or maybe a lack of caffine. I'll have commenting enabled where I can so long as people are not abusing the system.</p>
+        </div>
+        <div class="articles">
+            {% for post in paginator.posts %}
+            <div class="article">
+                <h1 class="article__title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+                <div class="article__meta">Written: {{ post.date | date: "%b %-d, %Y" }}
+                    {% if post.category %}
+                    , in 
+                    <a href="{{ site.baseurl }}/articles/categories/#{{ post.category }}">{{post.category}}</a>
+                    {% endif %}
+                    {% if post.tags %}
+                    ;
+                    {% for tag in post.tags %}
+                    <a class="tag" href="{{ site.baseurl }}/articles/tags/#{{ tag }}">{{ tag }}</a>
+                    {% endfor %}
+                    {% endif %}
+                    {% if post.comments %} 
+                    • <a href="{{ page.url | prepend: site.baseurl }}#disqus_thread">Join the Discussion</a>
+                    {% endif %}
+                </div>
+                <p>{{ post.excerpt }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

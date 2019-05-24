@@ -1,68 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="canonical" href="https://johnweland.me">
-	<link rel="home" href="https://johnweland.me">
-	<meta name="Description" content="Landing page for me, John Weland, Software Engineer">
-	<link rel="manifest" href="/manifest.json">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="theme-color" content="#aa0000">
-	<link rel="stylesheet" href="css/application.css">
-	<title>Welcome To My Portfolio</title>
-</head>
-
-<body id="bg-img">
-	<header>
-		<div class="menu-btn">
-			<div class="btn-line"></div>
-			<div class="btn-line"></div>
-			<div class="btn-line"></div>
-		</div>
-
-		<nav class="menu">
-			<div class="menu-branding">
-				<div class="portrait"></div>
-			</div>
-			<ul class="menu-nav">
-				<li class="nav-item current">
-					<a href="index.html" class="nav-link" aria-label="Home">Home</a>
-				</li>
-				<li class="nav-item">
-					<a href="about.html" class="nav-link" aria-label="About">About</a>
-				</li>
-				<li class="nav-item">
-					<a href="work.html" class="nav-link" aria-label="My Work">My Work</a>
-				</li>
-				<li class="nav-item">
-					<a href="contact.html" class="nav-link" aria-label="Contact Me">Contact Me</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
-
-	<main id="home">
-		<h1 class="lg-heading">John
-			<span class="text-secondary">Weland</span>
-		</h1>
-		<h2 class="sm-heading">Web Developer, Software Engineer, Technology Enthusiast &amp; Entrepreneur.</h2>
-		<div class="icons">
-			<a href="https://twitter.com/jdngr_" aria-label="Twitter">
-				<span class="fa fa-twitter fa-2x"></span>
-			</a>
-			<a href="https://www.linkedin.com/in/johnweland/" aria-label="Linked In">
-				<span class="fa fa-linkedin fa-2x"></span>
-			</a>
-			<a href="https://github.com/johnweland" aria-label="Github">
-				<span class="fa fa-github fa-2x"></span>
-			</a>
-		</div>
-	</main>
-	<script src="https://use.fontawesome.com/98cf067160.js"></script>
-	<script src="js/application.js"></script>
-</body>
-
-</html>
+---
+layout: default
+---
+<section class="landing">
+    <div class="container" >
+        <h1 class="lg-heading">John <span class="text-secondary">Weland</span></h1>
+        <h2 class="sm-heading">Web Developer, Software Engineer, Entrepreneur</h2>
+        <div class="icons">
+            <a href="https://github.com/{{ site.github_username }}" class="fab fa-github fa-2x"><p class="sr-only">Github</p></a>
+            <a href="https://linkedin.com/in/{{ site.linkedin_username }}" class="fab fa-linkedin fa-2x"><p class="sr-only">Linked In</p></a>
+            <a href="https://twitter.com/{{ site.twitter_username }}" class="fab fa-twitter fa-2x"><p class="sr-only">Twitter</p></a>
+        </div>
+        <div class="cta">
+            <a href="#about">
+                <span class="fas fa-chevron-down"><p class="sr-only sr-only-focusable">Go to About</p></span>
+            </a>
+        </div>
+    </div>
+</section>
+<section id="about">
+    <div class="container">
+        <h2 class="lg-heading">About <span class="text-secondary">Me</span></h2>
+        <h3 class="sm-heading">Let me tell you a few things...</h3>
+        <div class="about-info">
+            <img src="{{ site.baseurl }}/img/portrait.webp" alt="John Weland" class="bio-image">
+            <div class="bio">
+                <h2 class="text-secondary">Bio</h2>
+                <p>First &amp; foremost; I am a father to a beautiful daughter &amp; a husband to an amazing wife, both of whom gracefully accept my nerdy ways.</p>
+                <p>I am martial artist, a gamer, a lover of all this technoloy &amp; a creator.</p>
+                <p>I aim to work in an environment where my skill set is put to good use &amp; I am given the opportunity to grow my skills further. My aspiration is to always be impactful, to leave a legacy of great things for the places at which I work.</p>
+            </div>
+            <div class="job job-1">
+                <h3>ICSolutions</h3>
+                <h4>Software Engineer</h4>
+                <p>At ICSolutions I have worked on &amp; maintained the "Enforcer" ICSolutions' cheif <abbr title="Intelectual Property">IP</abbr>, as well as created the <abbr title="Enforcer Real-Time Status">ERTS</abbr> devtools used by engineering &amp; helpdesk alike.</p>
+            </div>
+            <div class="job job-2">
+                <h3>Decypher Technologies</h3>
+                <h4>Mobile Apps Developer</h4>
+                <p>While Decypher, I worked as a contactor for the Department of Defense, building mobile applications &amp; <abbr title="Progressive Web App">PWA</abbr>s for the Army Medical Department, Center &amp; School to provide combat medics with digital training materials.</p>
+            </div>
+            <div class="job job-3">
+                <h3>Duke Contracting</h3>
+                <h4>Network Engineer</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequuntur iusto deserunt, explicabo blanditiis totam obcaecati libero similique architecto nostrum!</p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,25 @@
+title: "johnweland.me"
+email: "john.weland@gmail.com"
+author: "John Weland"
+description: "A Blog site"
+url: ""
+
+# Build settings
+permalink: articles/:title/
+sass:
+  sass_dir: css
+
+# Social icons
+show_social_icons: true
+github_username: johnweland
+twitter_username: j_weland
+linkedin_username: johnweland
+
+# plugins
+plugins: [jekyll-paginate]
+paginate: 3
+paginate_path: "/articles/page:num/"
+
+twitter_username: j_weland
+github_username:  johnweland
+linkedin_username: johnweland

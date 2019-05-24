@@ -3,29 +3,29 @@
     "name": "John Weland [dot] Me",
     "icons": [
       {
-        "src": "img/icon-128.png",
+        "src": "img/touch-icon-128.png",
         "type": "image/png",
         "sizes": "128x128"
       },
       {
-        "src": "img/icon-192.png",
+        "src": "img/touch-icon-192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "img/icon-256.png",
+        "src": "img/touch-icon-256.png",
         "type": "image/png",
         "sizes": "256x256"
       },
       {
-        "src": "img/icon-512.png",
+        "src": "img/touch-icon-512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
     ],
-    "start_url": ".",
-    "background_color": "#aa0000",
+    "start_url": "/",
+    "background_color": "#222",
     "display": "standalone",
     "scope": "./",
-    "theme_color": "#aa0000"
+    "theme_color": "#222"
   }

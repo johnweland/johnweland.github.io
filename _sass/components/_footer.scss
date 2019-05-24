@@ -1,0 +1,8 @@
+.stickyfooter {
+    background: darken($primary-color, 10);
+    margin: auto 0 0 0;
+    font-size: .9rem;
+    padding: 1rem;
+    color: set-text-color($primary-color);
+    height: 80px;
+}
