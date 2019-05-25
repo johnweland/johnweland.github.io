@@ -1,5 +1,5 @@
 .article {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     margin-bottom: 2rem;
     &__title {
         font-size: 3rem;
@@ -8,13 +8,13 @@
         }
     }
     &__subtitle {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Lato', sans-serif;
         margin-bottom: 1rem;
     }
     &__meta {
         display: flex;
         align-items: center;
-        font-size: .85rem;
+        font-size: .90rem;
         & a {
             margin: 0 .2rem;
         }

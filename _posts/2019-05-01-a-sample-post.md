@@ -42,12 +42,6 @@ $(document).ready(function() {
 });
 {% endhighlight %}
 
-##### a fenced code block
-```js
-$(document).ready(function() {
-  console.log('hello');
-});
-```
 A code section without any header
 <div class="no-select-button">
 {% highlight HTML %}
