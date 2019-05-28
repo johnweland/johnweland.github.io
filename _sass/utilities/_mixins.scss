@@ -2,7 +2,7 @@
     transition: all 0.5s ease-out;
 }
 @mixin background {
-        background: $home-image;
+        background: url('../img/background-mobile.webp');
         background-attachment: fixed;
         background-size: cover;
         &::after {
@@ -14,6 +14,9 @@
             left:0;
             background: rgba($primary-color, $background-opacity);
             z-index: -1;
+        }
+        @include media-XL {
+            background: url('../img/background-xl.webp');
         }
 }
 

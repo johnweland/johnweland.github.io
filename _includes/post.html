@@ -10,7 +10,7 @@
                 <a href="{{ site.baseurl }}/articles/categories/#{{ page.category }}">{{ page.category | capitalize }}</a>
                 {% for tag in page.tags %}
                 ;
-                <a class="tag" href="{{ site.baseurl }}/articles/tags/#{{ tag }}">{{ tag }}</a>
+                <a class="tag" href="{{ site.baseurl }}/articles/tags/#{{ tag }}">{{ tag | capitalize}}</a>
                 {% endfor %}
                 {% if page.comments %} 
                 • <a href="{{ page.url | prepend: site.baseurl }}#disqus_thread">Join the Discussion</a>

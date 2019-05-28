@@ -1,4 +1,5 @@
 import Navmenu from './menu.js';
+import LazyLoadImages from './lazy-load-images.js';
 //import ClipboardJS from './clipboard.min.js';
 
 'use strict';
@@ -9,6 +10,7 @@ if (window.navigator.serviceWorker) {
           .catch(error => console.log(`Service Worker: Error: ${error}`));
     })
 }
+LazyLoadImages.init();
 $(document).ready(() => {
     const nav = new Navmenu;
     nav.btn.addEventListener('click', nav.toggle);

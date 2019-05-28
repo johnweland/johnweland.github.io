@@ -22,7 +22,14 @@ layout: default
         <h2 class="lg-heading">About <span class="text-secondary">Me</span></h2>
         <h3 class="sm-heading">Let me tell you a few things...</h3>
         <div class="about-info">
-            <img src="{{ site.baseurl }}/img/portrait.webp" alt="John Weland" class="bio-image">
+            <picture>
+                <source media="(min-width: 768px)"
+                        srcset="{{ site.baseurl }}/img/portrait.webp 250w">
+                <source media="(min-width: 900px)"
+                        srcset="{{ site.baseurl }}/img/portrait-xl.webp 400w">
+                <source srcset="{{ site.baseurl }}/img/portrait-mobile.webp 150w">
+                <img class="bio-image js-lazy-image" src="{{ site.baseurl }}/img/portrait-mobile.webp" alt="Portrait of John Weland">
+            </picture>
             <div class="bio">
                 <h2 class="text-secondary">Bio</h2>
                 <p>First &amp; foremost; I am a father to a beautiful daughter &amp; a husband to an amazing wife, both of whom gracefully accept my nerdy ways.</p>

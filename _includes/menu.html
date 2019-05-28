@@ -5,7 +5,12 @@
 <nav class="menu" role="navigation">
     <div class="menu__branding">
         <a class="navbar-brand" href="{{ site.baseurl }}/">
-            <div class="portrait"></div>
+            <picture>
+                <source media="(min-width: 768px)"
+                        srcset="{{ site.baseurl }}/img/portrait2.webp 200w">
+                <source srcset="{{ site.baseurl }}/img/portrait2-mobile.webp 100w">
+                <img class="portrait js-lazy-image" src="{{ site.baseurl }}/img/portrait2-mobile.webp">
+            </picture>
             {{ site.title }}
         </a>
     </div>
