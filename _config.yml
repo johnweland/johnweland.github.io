@@ -1,8 +1,8 @@
 title: "johnweland.me"
 email: "john.weland@gmail.com"
 author: "John Weland"
-description: "A Blog site"
-url: ""
+description: "The portfolio and blog of a nerdy dude."
+url: "https://johnweland.me"
 
 # Build settings
 permalink: articles/:title/
@@ -19,7 +19,3 @@ linkedin_username: johnweland
 plugins: [jekyll-paginate]
 paginate: 3
 paginate_path: "/articles/page:num/"
-
-twitter_username: j_weland
-github_username:  johnweland
-linkedin_username: johnweland
