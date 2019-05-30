@@ -28,7 +28,7 @@ description: An archive of all posts.
                     {% endfor %}
                     {% endif %}
                     {% if post.comments %} 
-                    • <a href="{{ page.url | prepend: site.baseurl }}#disqus_thread">Join the Discussion</a>
+                    • <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">Join the Discussion</a>
                     {% endif %}
                 </div>
                 {{ post.content | strip_html | truncatewords: 50 }} <a hre="{{ post.url | prepend: site.baseurl }}">Read More</a>
