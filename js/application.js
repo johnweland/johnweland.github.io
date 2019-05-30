@@ -1,39 +1,35 @@
-const menuBtn = document.querySelector(".menu-btn");
-const menu = document.querySelector(".menu");
-const menuNav = document.querySelector(".menu-nav");
-const menuBranding = document.querySelector(".menu-branding");
-const navItems = document.querySelectorAll(".nav-item");
+import Navmenu from './menu.js';
+import LazyLoadImages from './lazy-load-images.js';
+//import ClipboardJS from './clipboard.min.js';
 
-let showMenu = false;
-menuBtn.addEventListener("click", toggleMenu);
-
-function toggleMenu() {
-  if (!showMenu) {
-    menuBtn.classList.add("close");
-    menu.classList.add("show");
-    menuNav.classList.add("show");
-    menuBranding.classList.add("show");
-    navItems.forEach(item => item.classList.add("show"));
-    showMenu = true;
-  } else {
-    menuBtn.classList.remove("close");
-    menu.classList.remove("show");
-    menuNav.classList.remove("show");
-    menuBranding.classList.remove("show");
-    navItems.forEach(item => item.classList.remove("show"));
-    showMenu = false;
-  }
+'use strict';
+if (window.navigator.serviceWorker) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('/serviceworker.js')
+          .catch(error => console.log(`Service Worker: Error: ${error}`));
+    })
 }
+LazyLoadImages.init();
+$(document).ready(() => {
+    const nav = new Navmenu;
+    nav.btn.addEventListener('click', nav.toggle);
+    if (!nav.btn.length) {
+        Object.keys(nav.items).map(item => nav.items[item].classList.add('show'));
+    }
 
-if('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('../sw.js')
-      .then((registration) => {
-        console.log("Service Worker: Registered", registration);
-      })
-      .catch((error) => {
-        console.log(`Service Worker: Error: ${error}`);
-      })
-  })
-}
+    $('.highlight').each(function(i) {
+        if (!$(this).parent().hasClass('no-select-button')) {
+            let currentId = "codeblock" + (i + 1);
+            let codeSection = $(this).find('code');
+            codeSection.attr('id', currentId);
+            let btn = document.createElement('a');
+            btn.setAttribute('type', 'btn');
+            btn.setAttribute('class', 'btn-copy-code');
+            btn.setAttribute('data-clipboard-target', '#' + currentId);
+            btn.innerHTML = '<i class="far fa-copy"></i> copy to clipboard';
+            this.insertBefore(btn, this.firstChild);
+        }
+    });
+    new ClipboardJS('.btn-copy-code');
+});

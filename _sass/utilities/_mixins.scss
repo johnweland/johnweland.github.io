@@ -1,0 +1,70 @@
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+}
+@mixin background {
+        background: url('../img/background-mobile.webp');
+        background-attachment: fixed;
+        background-size: cover;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height:120vh;
+            top:0;
+            left:0;
+            background: rgba($primary-color, $background-opacity);
+            z-index: -1;
+        }
+        @include media-XL {
+            background: url('../img/background-xl.webp');
+        }
+}
+
+@mixin sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@mixin sr-only-focusable {
+    &:active,
+    &:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+    }
+}
+
+
+
+@mixin media-SM {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin media-MD {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-LG {
+    @media screen and (min-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin media-XL {
+    @media screen and (min-width: 2000px) {
+        @content;
+    }
+}
