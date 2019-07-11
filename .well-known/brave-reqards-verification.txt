@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: johnweland.me 
-Token: c67a964cd3d585f6bbb4ebc9e4bfd5b3f1876d5bb0be6d5c447b2ac97fc4a427
