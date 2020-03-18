@@ -2,7 +2,7 @@
 layout: post
 title:  "Building a URL Shortening service"
 description: "While bored, I wanted hone my skills and make something useful."
-date:   2020-03-10 00:00:00 -0500
+date:   2020-03-18 00:00:00 -0500
 category: project
 tags: ['NodeJS', 'APIs', 'Passport']
 comments: true
