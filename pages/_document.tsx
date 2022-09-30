@@ -1,4 +1,4 @@
-import { Head, Html, Main, NextScript } from 'next/document'
+import { Head, Html, Main, NextScript } from "next/document";
 
 const themeScript = `
   let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -44,18 +44,21 @@ const themeScript = `
   }).observe(document.documentElement, { attributeFilter: ['data-theme'], attributeOldValue: true })
   mediaQuery.addEventListener('change', updateThemeWithoutTransitions)
   window.addEventListener('storage', updateThemeWithoutTransitions)
-`
+`;
 
 export default function Document() {
   return (
-    <Html className="antialiased [font-feature-settings:'ss01']" lang="en">
+    <Html
+      className="antialiased [font-feature-settings:'ss01'] h-full"
+      lang="en"
+    >
       <Head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </Head>
-      <body className="bg-white dark:bg-slate-900">
+      <body className="h-full bg-white dark:bg-neutral-900">
         <Main />
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }
