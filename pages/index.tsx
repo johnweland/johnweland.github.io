@@ -14,17 +14,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
-      <div className="mx-auto max-w-7xl lg:px-8 prose dark:prose-invert">
+      <div className="mx-auto max-w-7xl lg:px-8 prose dark:prose-invert mb-4">
         <h2 className="text-3xl font-bold"> About </h2>
 
         <p>
           First & foremost; I am a father to a beautiful daughter & a husband to
           an amazing wife, both of whom gracefully accept my nerdy ways.
-        </p>
-
-        <p>
-          I am martial artist, a gamer, a lover of all this technoloy & a
-          creator.
         </p>
 
         <p>
@@ -34,8 +29,8 @@ const Home: NextPage = () => {
           places at which I work.
         </p>
       </div>
-      <div className="mx-auto max-w-7xl lg:px-8 prose dark:prose-invert">
-        portfolio showcase
+      <div className="mx-auto max-w-7xl lg:px-8 prose dark:prose-invert mb-4">
+        <h2 className="text-3xl font-bold"> Portfolio </h2>
       </div>
     </>
   );
