@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import Terminal from "./terminal";
 
 const social = [
   {
@@ -43,50 +44,44 @@ const social = [
 
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden">
-      <main>
-        <div className="bg-white dark:bg-neutral-900 pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14">
-          <div className="mx-auto max-w-7xl lg:px-8">
-            <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-              <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
-                <div className="lg:py-24">
-                  <h1 className="mt-4 text-4xl font-bold tracking-tight dark:text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                    <span className="">John</span>
-                    <span className="text-indigo-400"> Weland</span>
-                  </h1>
-                  <p className="mt-3 text-base dark:text-neutral-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                    Engineer, Cloud Architect, Entrepreneur
-                  </p>
-                  <div className="flex justify-center space-x-3 mt-10 sm:mt-12">
-                    {social.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="text-gray-600 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-200"
-                      >
-                        <span className="sr-only">{item.name}</span>
-                        <item.icon className="h-12 w-12" aria-hidden="true" />
-                      </a>
-                    ))}
-                  </div>
-                </div>
+    <div className="relative overflow-hidden py-24">
+      <div className="bg-white dark:bg-neutral-900 pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14">
+        <div className="mx-auto max-w-7xl lg:px-8">
+          <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+            <div className="mx-auto p-4 text-center lg:px-0 flex-col justify-center items-center">
+              <h1 className="mt-4 text-4xl font-bold tracking-tight dark:text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                <span className="">John</span>
+                <span className="text-indigo-400"> Weland</span>
+              </h1>
+              <p className="mt-3 text-base dark:text-neutral-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                Engineer, Cloud Architect, Entrepreneur
+              </p>
+              <div className="flex justify-center space-x-3 mt-10 sm:mt-12">
+                {social.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-gray-600 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-200 p-2"
+                  >
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon className="h-10 w-10" aria-hidden="true" />
+                  </a>
+                ))}
               </div>
-              <div className="mt-12 -mb-16 sm:-mb-48 lg:relative lg:m-0">
-                <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
-                  {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
-                  <img
-                    className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://tailwindui.com/img/component-images/cloud-illustration-indigo-400.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
+            </div>
+            <div className="p-4 lg:max-w-none lg:px-0 flex-col justify-center items-center">
+              <Terminal
+                className="py-24 blahblah"
+                language="javascript"
+                name="lambda.handler"
+                file="cdk.ts"
+              >
+                {`const handler = ( event ) => { \n // do stuff \n}`}
+              </Terminal>
             </div>
           </div>
         </div>
-
-        {/* More main page content here... */}
-      </main>
+      </div>
     </div>
   );
 };
