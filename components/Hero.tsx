@@ -44,16 +44,27 @@ const social = [
 
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden py-24">
-      <div className="bg-white dark:bg-neutral-900 pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14">
+    <div className="relative overflow-hidden py-20 mb-24">
+      <div className="absolute inset-0">
+        <img
+          className="h-full w-full object-cover shadow-inner scale-x-[-1]"
+          src="https://cdn.pixabay.com/photo/2016/10/15/13/40/laptop-1742462_1280.jpg"
+          alt=""
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-indigo-700 to-emerald-600 mix-blend-multiply shadow-inner" />
+      </div>
+      <div className="relative pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14 z-10">
         <div className="mx-auto max-w-7xl lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
             <div className="mx-auto p-4 text-center lg:px-0 flex-col justify-center items-center">
-              <h1 className="mt-4 text-4xl font-bold tracking-tight dark:text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+              <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                 <span className="">John</span>
-                <span className="text-indigo-400"> Weland</span>
+                <span className="text-transparent bg-gradient-to-r from-emerald-400 to-emerald-700 bg-clip-text">
+                  {" "}
+                  Weland
+                </span>
               </h1>
-              <p className="mt-3 text-base dark:text-neutral-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+              <p className="mt-3 text-base font-bold text-neutral-100 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                 Engineer, Cloud Architect, Entrepreneur
               </p>
               <div className="flex justify-center space-x-3 mt-10 sm:mt-12">
@@ -61,7 +72,7 @@ const Hero = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-gray-600 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-200 p-2"
+                    className="text-gray-100 hover:text-gray-200 p-2"
                   >
                     <span className="sr-only">{item.name}</span>
                     <item.icon className="h-10 w-10" aria-hidden="true" />
@@ -73,10 +84,24 @@ const Hero = () => {
               <Terminal
                 className="py-24 blahblah"
                 language="javascript"
-                name="lambda.handler"
-                file="cdk.ts"
+                name="cdk"
+                file="lib/notify-stack.ts"
               >
-                {`const handler = ( event ) => { \n // do stuff \n}`}
+                {`import * as cdk from 'aws-cdk-lib';
+import * as sns from 'aws-cdk-lib/aws-sns';
+import * as subs from 'aws-cdk-lib/aws-sns-subscriptions';
+import * as sqs from 'aws-cdk-lib/aws-sqs';
+
+export class NotifyStack extends cdk.Stack {
+  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
+    super(scope, id, props);
+    const queue = new sqs.Queue(this, 'NotifyQueue', {
+      visibilityTimeout: cdk.Duration.seconds(300)
+    });
+    const topic = new sns.Topic(this, 'NotifyTopic');
+    topic.addSubscription(new subs.SqsSubscription(queue));
+  }
+}`}
               </Terminal>
             </div>
           </div>

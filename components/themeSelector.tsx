@@ -79,8 +79,8 @@ const ThemeSelector = (props) => {
       <Listbox.Label className="sr-only">Theme</Listbox.Label>
       <Listbox.Button className="flex h-12 w-12 items-center justify-center rounded-lg shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-neutral-800 dark:ring-inset dark:ring-white/5">
         <span className="sr-only">{selectedTheme?.name}</span>
-        <LightIcon className="hidden h-4 w-4 fill-indigo-400 [[data-theme=light]_&]:block" />
-        <DarkIcon className="hidden h-4 w-4 fill-indigo-400 [[data-theme=dark]_&]:block" />
+        <LightIcon className="hidden h-4 w-4 fill-emerald-400 [[data-theme=light]_&]:block" />
+        <DarkIcon className="hidden h-4 w-4 fill-emerald-400 [[data-theme=dark]_&]:block" />
         <LightIcon className="hidden h-4 w-4 fill-neutral-400 [:not(.dark)[data-theme=system]_&]:block" />
         <DarkIcon className="hidden h-4 w-4 fill-neutral-400 [.dark[data-theme=system]_&]:block" />
       </Listbox.Button>
@@ -93,7 +93,7 @@ const ThemeSelector = (props) => {
               clsx(
                 "flex cursor-pointer select-none items-center rounded-[0.625rem] p-1",
                 {
-                  "text-indigo-500": selected,
+                  "text-emerald-500": selected,
                   "text-neutral-900 dark:text-white": active && !selected,
                   "text-neutral-700 dark:text-neutral-400":
                     !active && !selected,
@@ -107,7 +107,7 @@ const ThemeSelector = (props) => {
                 <div className="rounded-md bg-white p-1 shadow ring-1 ring-neutral-900/5 dark:bg-neutral-700 dark:ring-inset dark:ring-white/5">
                   <theme.icon
                     className={clsx("h-4 w-4", {
-                      "fill-indigo-400 dark:fill-indigo-400": selected,
+                      "fill-emerald-400 dark:fill-emerald-400": selected,
                       "fill-neutral-400": !selected,
                     })}
                   />

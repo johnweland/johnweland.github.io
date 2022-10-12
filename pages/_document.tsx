@@ -49,7 +49,7 @@ const themeScript = `
 export default function Document() {
   return (
     <Html
-      className="antialiased [font-feature-settings:'ss01'] h-full"
+      className="antialiased [font-feature-settings:'ss01'] h-full scroll-smooth"
       lang="en"
     >
       <Head>

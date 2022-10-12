@@ -11,7 +11,7 @@ const NotFound = () => {
         }}
       >
         <div className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-24 lg:px-8 lg:py-48">
-          <p className="text-base font-semibold text-black text-opacity-50">
+          <p className="text-8xl font-semibold text-black text-opacity-50">
             404
           </p>
           <h1 className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">

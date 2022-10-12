@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import ThemeSelector from "components/themeSelector";
 import {
   Bars2Icon,
-  ChatBubbleLeftRightIcon,
+  DocumentTextIcon,
   XMarkIcon,
   GlobeAmericasIcon,
 } from "@heroicons/react/24/solid";
@@ -37,11 +37,11 @@ const NavBar = () => {
   useEffect(() => setMounted(true), []);
 
   return (
-    <Popover className="relative bg-white dark:bg-neutral-900">
+    <Popover className="relative bg-white dark:bg-neutral-900 mb-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 border-neutral-100 dark:border-neutral-800 py-6 md:justify-start md:space-x-10">
           <div
-            className="flex justify-start lg:flex-1 p-1.5 rounded-full ring-2 ring-indigo-600 max-w-[36px]
+            className="flex justify-start lg:flex-1 p-1.5 rounded-full ring-2 ring-emerald-600 max-w-[36px]
           "
           >
             <Link href="/">
@@ -54,7 +54,7 @@ const NavBar = () => {
                   src={"/images/damnedcatstudio.jpg"}
                   alt="Damned Cat Damned Logo"
                 /> */}
-                <GlobeAmericasIcon className="flex-shrink-0 h-6 w-6 text-indigo-500 dark:text-white" />
+                <GlobeAmericasIcon className="flex-shrink-0 h-6 w-6 text-emerald-500 dark:text-white" />
               </a>
             </Link>
           </div>
@@ -62,7 +62,7 @@ const NavBar = () => {
             <ThemeSelector className="relative z-10" />
           </div>
           <div className="-mr-2 -my-2 md:hidden">
-            <Popover.Button className="bg-white dark:bg-neutral-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <Popover.Button className="bg-white dark:bg-neutral-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
               <span className="sr-only">Open menu</span>
               <Bars2Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -94,6 +94,15 @@ const NavBar = () => {
             })}
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            <Link href="/contact">
+              <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-emerald-700 rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-emerald-400 to-emerald-700 hover:bg-emerald-800 mr-2">
+                <DocumentTextIcon
+                  className="flex-shrink-0 h-6 w-6 text-white"
+                  aria-hidden="true"
+                />
+                Resume
+              </a>
+            </Link>
             <ThemeSelector className="relative z-10" />
           </div>
         </div>
@@ -116,7 +125,7 @@ const NavBar = () => {
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div
-                  className="flex justify-start lg:flex-1 p-1.5 rounded-full ring-2 ring-indigo-600 max-w-[36px]
+                  className="flex justify-start lg:flex-1 p-1.5 rounded-full ring-2 ring-emerald-600 max-w-[36px]
           "
                 >
                   <Link href="/">
@@ -129,12 +138,12 @@ const NavBar = () => {
                   src={"/images/damnedcatstudio.jpg"}
                   alt="Damned Cat Damned Logo"
                 /> */}
-                      <GlobeAmericasIcon className="flex-shrink-0 h-6 w-6 text-indigo-500 dark:text-white" />
+                      <GlobeAmericasIcon className="flex-shrink-0 h-6 w-6 text-emerald-500 dark:text-white" />
                     </a>
                   </Link>
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="bg-white dark:bg-neutral-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="bg-white dark:bg-neutral-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
                     <span className="sr-only">Close menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -171,6 +180,19 @@ const NavBar = () => {
                     }
                   })}
                 </nav>
+              </div>
+            </div>
+            <div className="py-6 px-5 space-y-6">
+              <div>
+                <Link href="/resume">
+                  <a className="w-full flex items-center justify-center px-4 py-2 border-0 rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-emerald-400 to-emerald-700 hover:bg-emerald-800">
+                    <DocumentTextIcon
+                      className="flex-shrink-0 h-6 w-6 text-white"
+                      aria-hidden="true"
+                    />
+                    Resume
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
