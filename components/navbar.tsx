@@ -2,8 +2,6 @@ import { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Popover, Transition } from "@headlessui/react";
-import { useState, useEffect } from "react";
-import ThemeSelector from "components/themeSelector";
 import {
   Bars2Icon,
   DocumentTextIcon,
@@ -33,13 +31,10 @@ const navItems = [
 ];
 
 const NavBar = () => {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-
   return (
-    <Popover className="relative bg-white dark:bg-neutral-900 mb-4">
+    <Popover className="relative bg-neutral-900 mb-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center border-b-2 border-neutral-100 dark:border-neutral-800 py-6 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center border-b-2 border-neutral-800 py-6 md:justify-start md:space-x-10">
           <div
             className="flex justify-start lg:flex-1 p-1.5 rounded-full ring-2 ring-emerald-600 max-w-[36px]
           "
@@ -54,15 +49,12 @@ const NavBar = () => {
                   src={"/images/damnedcatstudio.jpg"}
                   alt="Damned Cat Damned Logo"
                 /> */}
-                <GlobeAmericasIcon className="flex-shrink-0 h-6 w-6 text-emerald-500 dark:text-white" />
+                <GlobeAmericasIcon className="flex-shrink-0 h-6 w-6 text-white" />
               </a>
             </Link>
           </div>
-          <div className="mr-2 ml-[auto] md:hidden">
-            <ThemeSelector className="relative z-10" />
-          </div>
           <div className="-mr-2 -my-2 md:hidden">
-            <Popover.Button className="bg-white dark:bg-neutral-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
+            <Popover.Button className="bg-neutral-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
               <span className="sr-only">Open menu</span>
               <Bars2Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -74,7 +66,7 @@ const NavBar = () => {
                   <Link href={item.href} key={item.name}>
                     <a
                       title={item.description}
-                      className="text-base font-medium text-gray-500 hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-100"
+                      className="text-base font-medium text-gray-200 hover:text-gray-100"
                     >
                       {item.name}
                     </a>
@@ -85,7 +77,7 @@ const NavBar = () => {
                   <p
                     key={item.name}
                     title={item.description}
-                    className="text-base font-medium text-gray-300 dark:text-gray-700"
+                    className="text-base font-medium text-gray-700"
                   >
                     {item.name}
                   </p>
@@ -103,7 +95,6 @@ const NavBar = () => {
                 Resume
               </a>
             </Link>
-            <ThemeSelector className="relative z-10" />
           </div>
         </div>
       </div>
@@ -121,7 +112,7 @@ const NavBar = () => {
           focus
           className="absolute top-0 z-50 inset-x-0 p-2 transition transform origin-top-right md:hidden"
         >
-          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-neutral-800 divide-y-2 divide-gray-50">
+          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-neutral-800 divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div
@@ -138,12 +129,12 @@ const NavBar = () => {
                   src={"/images/damnedcatstudio.jpg"}
                   alt="Damned Cat Damned Logo"
                 /> */}
-                      <GlobeAmericasIcon className="flex-shrink-0 h-6 w-6 text-emerald-500 dark:text-white" />
+                      <GlobeAmericasIcon className="flex-shrink-0 h-6 w-6 text-white" />
                     </a>
                   </Link>
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="bg-white dark:bg-neutral-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
+                  <Popover.Button className="bg-neutral-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
                     <span className="sr-only">Close menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -157,9 +148,9 @@ const NavBar = () => {
                         <Link href={item.href} key={item.name}>
                           <a
                             title={item.description}
-                            className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-700"
+                            className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-700"
                           >
-                            <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-100">
+                            <span className="ml-3 text-base font-medium text-gray-100">
                               {item.name}
                             </span>
                           </a>
@@ -170,9 +161,9 @@ const NavBar = () => {
                         <p
                           key={item.name}
                           title={item.description}
-                          className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-700"
+                          className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-700"
                         >
-                          <span className="ml-3 text-base font-medium text-gray-300 dark:text-gray-500">
+                          <span className="ml-3 text-base font-medium text-gray-500">
                             {item.name}
                           </span>
                         </p>

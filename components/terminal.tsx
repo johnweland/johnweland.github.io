@@ -14,11 +14,11 @@ const Terminal = ({ children, ...props }) => {
   return (
     <>
       <div className="relative">
-        <div className="inset-x-[-50vw] -top-32 -bottom-48 [mask-image:linear-gradient(transparent,white,white)] dark:[mask-image:linear-gradient(transparent,white,transparent)] lg:left-[calc(50%+14rem)] lg:right-0 lg:-top-32 lg:-bottom-32 lg:[mask-image:none] lg:dark:[mask-image:linear-gradient(white,white,transparent)]"></div>
+        <div className="inset-x-[-50vw] -top-32 -bottom-48 [mask-image:linear-gradient(transparent,white,transparent)] lg:left-[calc(50%+14rem)] lg:right-0 lg:-top-32 lg:-bottom-32 lg:[mask-image:linear-gradient(white,white,transparent)]"></div>
         <div className="absolute -top-64 -right-64"></div>
         <div className="absolute -bottom-40 -right-44"></div>
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-indigo-300 via-emerald-300/70 to-emerald-300 opacity-50 blur-lg"></div>
-        <div className="relative rounded-2xl bg-neutral-900/80 ring-1 ring-emerald/10 backdrop-blur">
+        <div className="relative rounded-2xl bg-neutral-900/60 ring-1 ring-emerald/10 backdrop-blur">
           <div className="absolute -top-px left-20 right-11 h-px bg-gradient-to-r from-emerald-300/10 via-emerald-300/70 to-emerald-300/10" />
           <div className="absolute -bottom-px left-11 right-20 h-px bg-gradient-to-r from-emerald-400/10 via-emerald-400 to-emerald-400/10" />
           <div className="pl-4 pt-4">
@@ -27,9 +27,9 @@ const Terminal = ({ children, ...props }) => {
               className="h-2.5 w-auto stroke-neutral-500"
               fill="none"
             >
-              <circle cx="5" cy="5" r="4.5" />
-              <circle cx="21" cy="5" r="4.5" />
-              <circle cx="37" cy="5" r="4.5" />
+              <circle cx="5" cy="5" r="4.5" fill="#ef4444" />
+              <circle cx="21" cy="5" r="4.5" fill="#facc15" />
+              <circle cx="37" cy="5" r="4.5" fill="#22c55e" />
             </svg>
             <div className="mt-4 flex space-x-2 text-xs">
               {tabs.map((tab) => (

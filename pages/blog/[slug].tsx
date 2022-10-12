@@ -45,7 +45,7 @@ const PostPage = ({ frontmatter, content }) => {
         <meta name="author" content={frontmatter.author} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <article className="prose dark:prose-invert">
+      <article className="prose prose-invert">
         <h1>{frontmatter.title}</h1>
         <small>{frontmatter.tagline}</small>
         <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />

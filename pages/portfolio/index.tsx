@@ -12,7 +12,7 @@ const Portfolio: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="max-w-7xl mx-auto px-4 py-4 sm:px-6 dark:text-white">
+      <main className="max-w-7xl mx-auto px-4 py-4 sm:px-6 text-white">
         Portfolio
       </main>
     </>

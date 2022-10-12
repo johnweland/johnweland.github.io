@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
-import Terminal from "./terminal";
+import Terminal from "../components/terminal";
 
 const social = [
   {
@@ -47,7 +47,7 @@ const Hero = () => {
     <div className="relative overflow-hidden py-20 mb-24">
       <div className="absolute inset-0">
         <img
-          className="h-full w-full object-cover shadow-inner scale-x-[-1]"
+          className="h-full w-full object-cover scale-x-[-1]"
           src="https://cdn.pixabay.com/photo/2016/10/15/13/40/laptop-1742462_1280.jpg"
           alt=""
         />
