@@ -74,13 +74,26 @@ export default function About() {
                 practices or technologies.
               </p>
               <p>
-                Outside of my &quot;day job&quot; I stay busy. I founded Damned
-                Cat Studio &#40;DCS&#41; with my buddy Tim. DCS is a game
-                development studio. My wife and I are volunteers of and manage
-                the local animal rescue, Jackson County Animal Protection
-                Society &#40;JCAPS&#41;. I also volunteer at my communty garden
-                and currently running for City Council in hopes of getting
-                things accomplished in our small community.
+                Outside of my &quot;day job&quot; I stay busy. I founded{' '}
+                <Link href="https://damnedcat.studio">
+                  <a className="text-teal-500 underline">Damned Cat Studio</a>
+                </Link>{' '}
+                &#40;DCS&#41;, a game development studio with my buddy Tim.
+              </p>
+              <p>
+                My wife and I are volunteers of, and manage the local animal
+                rescue,{' '}
+                <Link href="https://jcapsmn.org">
+                  <a className="text-teal-500 underline">
+                    Jackson County Animal Protection Society
+                  </a>
+                </Link>{' '}
+                &#40;JCAPS&#41;.
+              </p>
+              <p>
+                I also volunteer at my communty garden and currently running for
+                City Council in hopes of getting things accomplished in our
+                small community.
               </p>
             </div>
           </div>

@@ -137,7 +137,7 @@ function Resume() {
   let resume = [
     {
       company: 'Rural Sourcing Inc.',
-      title: 'Senior (Cloud/AWS)',
+      title: 'Solutions Architect (Cloud/AWS)',
       logo: logoRSI,
       start: '2021',
       end: {
@@ -213,10 +213,10 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      {/* <Button href="#" variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
+      </Button> */}
     </div>
   )
 }
@@ -266,19 +266,20 @@ export default function Home({ articles }) {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Web Developer, Software Engineer, Entrepreneur
+            Solutions Architect, Software Engineer, Entrepreneur
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I am a Solutions Architect with over 9 years of experience in
             software engineering. I have worked with a variety of clients across
             an array of org structures. Everything from defense contracting to
-            fresh startups.
+            fresh startups. I have no qualms about automating myself out of a
+            job.
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I practice DevOps and apply strong technical, functional and
-            analytical skills and operate with a strong sense of urgency and
-            thrive in fast paced setting in order to solve business problems
-            expediently.
+            In leadership roles, my responsibility is as much to meeting the
+            client&apos;s needs as it is helping my team members grow in their
+            careers. To help them take on new and exciting challenges while
+            ensuring they have a healthy work-life balance.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
