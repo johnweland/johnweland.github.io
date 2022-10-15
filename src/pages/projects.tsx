@@ -21,7 +21,7 @@ const projects = [
         label: 'blog post',
       },
     ],
-    logo: '/images/logos/ipblock.webp',
+    logo: '/images/logos/ipblocker.webp',
   },
   // {
   //   name: 'WordPress on AWS IaC',
