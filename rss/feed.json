@@ -1,9 +1,10 @@
 {
     "version": "https://jsonfeed.org/version/1",
     "title": "John Weland",
-    "feed_url": "undefined/rss/feed.json",
+    "home_page_url": "https://johnweland.me",
+    "feed_url": "https://johnweland.me/rss/feed.json",
     "description": "All of my long-form thoughts on programming, leadership, project architecture, and more, collected in chronological order.",
-    "icon": "undefined/favicon.ico",
+    "icon": "https://johnweland.me/favicon.ico",
     "author": {
         "name": "John Weland"
     },
