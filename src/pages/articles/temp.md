@@ -1,0 +1,36 @@
+It is not uncommon these days to have a potential employer put your skills to the test with a code challenge. Typically, in my experience, this is a smaller task or set of tasks and they expect you do perform live over the course of a few minutes to an hour.
+
+This was the first time I had-- had a code challenge that was not live and where the expected turnaround was approximately a week or development time.
+
+## The Project Description
+
+> &nbsp;
+> The goal of this exercise is to iterate on the development and deployment of a “cloud native” service in AWS that can be invoked to check a set of IP address lists for every single attempted phone call placed on our network, as part of a larger fraud detection system.If the IP address is listed in any sources, then they should be returned.
+>
+> The service will retrieve and automatically update from https://github.com/firehol/blocklist-ipsets without any manual intervention.
+> &nbsp;
+
+- Deliverables should include everything needed to deploy(and maintain) the service in a production AWS account.
+- Code should be developed in Typescript or Java, and only make the assumption all developers run a macOS development environment.
+- Bonus points for high availability deployments, benchmarks, and telemetry.
+
+## What I built
+
+I was up to this point relatively green when it came to [AWS](https://aws.amazon.com/). I chose to break my project into two parts; the first would be a scheduled job that would pull from the [Firehol](https://github.com/firehol/.blocklist-ipsets) list and update DynamoDB as needed.
+
+The second part would be a Lambda that is invoked via API Gateway to query the passed input (IP Address) from DynamoDB, and return a JSON payload including information like is the IP on a block list? Where is the IP from geographically.
+
+## What I would do differently
+
+While my deployment worked, if I had to do it over again; I could keep a queryable service with something like this.
+
+1. I would move the setup/update to an EC2 instance that would be started and stopped by a lambda.
+
+   - This would weed out any potential timeouts trying ot update the IP addresses directly from Lambda which as a 15 minute max time limit.
+   - If there was an error in updating, this would allow me to set an alarm and then trigger a second attempt or get a human involved.
+
+2. I would update the querying side of the project to take in IP ranges with CIDR e.g`a.b.c.0/24`
+
+3. Lastly while I used `serverless` in this implementation, if I were to do it over I would concider using`aws-cdk` as my TypeScript library of choice as it is maintained directly from Amazon's AWS team and builds the blueprints/templates for your stack.
+
+An alternative if you don't need a queryable service, is that the EC2 that runs to update the IP list rather than updating a DynamoDB you could simply update the WAF (web application firewall) infront of your infrastructurer.
