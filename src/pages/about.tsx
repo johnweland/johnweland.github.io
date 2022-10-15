@@ -78,10 +78,8 @@ export default function About() {
                 <Link href="https://damnedcat.studio">
                   <a className="text-teal-500 underline">Damned Cat Studio</a>
                 </Link>{' '}
-                &#40;DCS&#41;, a game development studio with my buddy Tim.
-              </p>
-              <p>
-                My wife and I are volunteers of, and manage the local animal
+                &#40;DCS&#41;, a game development studio with my buddy Tim. My
+                wife and I are volunteers of, and manage the local animal
                 rescue,{' '}
                 <Link href="https://jcapsmn.org">
                   <a className="text-teal-500 underline">

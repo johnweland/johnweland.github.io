@@ -99,7 +99,7 @@ function Article({ article }) {
 function SocialLink({ icon: Icon, ...props }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+      <Icon className="h-10 w-10 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
   )
 }
@@ -301,13 +301,14 @@ export default function Home({ articles }) {
         </div>
       </Container>
       <Container>
-        <Terminal
-          className="blahblah py-24"
-          language="javascript"
-          name="cdk"
-          file="lib/notify-stack.ts"
-        >
-          {`import * as cdk from 'aws-cdk-lib';
+        <div className="max-w-2xl lg:ml-auto">
+          <Terminal
+            className="py-24"
+            language="javascript"
+            name="cdk"
+            file="lib/notify-stack.ts"
+          >
+            {`import * as cdk from 'aws-cdk-lib';
 import * as sns from 'aws-cdk-lib/aws-sns';
 import * as subs from 'aws-cdk-lib/aws-sns-subscriptions';
 import * as sqs from 'aws-cdk-lib/aws-sqs';
@@ -322,7 +323,8 @@ export class NotifyStack extends cdk.Stack {
     topic.addSubscription(new subs.SqsSubscription(queue));
   }
 }`}
-        </Terminal>
+          </Terminal>
+        </div>
       </Container>
       {/* <Photos /> */}
       <Container className="mt-24 md:mt-28">
