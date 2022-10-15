@@ -4,9 +4,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-import { Container } from '@/components/Container'
-import { TwitterIcon, GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.webp'
+import { Container } from 'src/components/Container'
+import {
+  TwitterIcon,
+  GitHubIcon,
+  LinkedInIcon,
+} from 'src/components/SocialIcons'
+import portraitImage from 'src/images/portrait.webp'
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
