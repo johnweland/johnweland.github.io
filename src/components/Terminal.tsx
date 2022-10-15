@@ -51,7 +51,7 @@ const Terminal = ({ children, ...props }) => {
                 </div>
               ))}
             </div>
-            <div className="mt-6 flex items-start px-1 text-sm lg:text-xs">
+            <div className="mt-6 flex items-start px-1 text-xs">
               <div
                 aria-hidden="true"
                 className="select-none border-r border-neutral-500 pr-4 font-mono text-neutral-500"
