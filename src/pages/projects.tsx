@@ -5,9 +5,6 @@ import Link from 'next/link'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoIPBlock from '@/images/logos/ipblock.webp'
-import logoShortener from '@/images/logos/shortener.webp'
-import logoAWSCDK from '@/images/logos/awscdk.webp'
 
 const projects = [
   {
@@ -24,7 +21,7 @@ const projects = [
         label: 'blog post',
       },
     ],
-    logo: logoIPBlock,
+    logo: '/images/logos/ipblock.webp',
   },
   // {
   //   name: 'WordPress on AWS IaC',
@@ -40,7 +37,7 @@ const projects = [
   //       label: 'blog post',
   //     },
   //   ],
-  //   logo: logoAWSCDK,
+  //   logo: '/images/logos/awscdk.webp',
   // },
   {
     name: 'URL Shortening Micro Service',
@@ -52,7 +49,7 @@ const projects = [
         label: 'github.com',
       },
     ],
-    logo: logoShortener,
+    logo: '/images/logos/shortener.webp',
   },
 ]
 
@@ -90,6 +87,8 @@ export default function Projects() {
               <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   src={project.logo}
+                  width={40}
+                  height={40}
                   alt=""
                   className="object-fit h-8 w-8 rounded-full bg-white"
                   unoptimized
