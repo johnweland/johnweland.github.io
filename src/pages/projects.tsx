@@ -3,11 +3,11 @@ import Image from 'next/future/image'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { Card } from 'src/components/Card'
-import { SimpleLayout } from 'src/components/SimpleLayout'
-import logoIPBlock from 'src/images/logos/ipblock.webp'
-import logoShortener from 'src/images/logos/shortener.webp'
-import logoAWSCDK from 'src/images/logos/awscdk.webp'
+import { Card } from '@/components/Card'
+import { SimpleLayout } from '@/components/SimpleLayout'
+import logoIPBlock from '@/images/logos/ipblock.webp'
+import logoShortener from '@/images/logos/shortener.webp'
+import logoAWSCDK from '@/images/logos/awscdk.webp'
 
 const projects = [
   {

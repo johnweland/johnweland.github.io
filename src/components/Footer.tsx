@@ -1,7 +1,7 @@
 // @ts-nocheck
 import Link from 'next/link'
 
-import { Container } from 'src/components/Container'
+import { Container } from '@/components/Container'
 
 function NavLink({ href, children }) {
   return (
