@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>John Weland</title>
+        <link>undefined</link>
+        <description>All of my long-form thoughts on programming, leadership, project architecture, and more, collected in chronological order.</description>
+        <lastBuildDate>Sat, 15 Oct 2022 18:28:33 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <image>
+            <title>John Weland</title>
+            <url>undefined/favicon.ico</url>
+            <link>undefined</link>
+        </image>
+        <copyright>All rights reserved 2022</copyright>
+        <item>
+            <title><![CDATA[Architecture of a Microservice]]></title>
+            <link>undefined/articles/architecture-of-a-microservice</link>
+            <guid>undefined/articles/architecture-of-a-microservice</guid>
+            <pubDate>Sun, 08 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[It is not uncommon these days to have a potential employer put your skills to the test with a code challenge. Typically, in my experience, this is a smaller task or set of tasks and they expect you do perform live over the course of a few minutes to an hour.
+
+This was the first time I had -- had a code challenge that was not live and where the expected turnaround was approximately a week of development time.]]></description>
+            <content:encoded><![CDATA[<p>It is not uncommon these days to have a potential employer put your skills to the test with a code challenge. Typically, in my experience, this is a smaller task or set of tasks and they expect you do perform live over the course of a few minutes to an hour.</p>
+<p>This was the first time I had -- had a code challenge that was not live and where the expected turnaround was approximately a week of development time.</p>
+<h2>The Project Description</h2>
+<blockquote>
+<p> 
+The goal of this exercise is to iterate on the development and deployment of a “cloud native” service in AWS that can be invoked to check a set of IP address lists for every single attempted phone call placed on our network, as part of a larger fraud detection system.If the IP address is listed in any sources, then they should be returned.</p>
+<p>The service will retrieve and automatically update from <a href="https://github.com/firehol/blocklist-ipsets">https://github.com/firehol/blocklist-ipsets</a> without any manual intervention.
+ </p>
+</blockquote>
+<ul>
+<li>Deliverables should include everything needed to deploy(and maintain) the service in a production AWS account.</li>
+<li>Code should be developed in Typescript or Java, and only make the assumption all developers run a macOS development environment.</li>
+<li>Bonus points for high availability deployments, benchmarks, and telemetry.</li>
+</ul>
+<h2>What I built</h2>
+<p>I was up to this point relatively green when it came to <a href="https://aws.amazon.com/">AWS</a>. I chose to break my project into two parts; the first was a scheduled job that would run on Lambda to pull from the <a href="https://github.com/firehol/.blocklist-ipsets">Firehol</a> list and update DynamoDB as needed.</p>
+<p>The second part was a Lambda that was invoked via API Gateway to query the passed input (IP Address)from DynamoDB. Then return a JSON payload including information like &quot;is the IP on a block list&quot;? &quot;Where is the IP from geographically&quot;?</p>
+<h2>What I would do differently</h2>
+<p>While my deployment worked, if I had to do it over again; I could keep a queryable service with something like this.</p>
+<ol>
+<li>
+<p>I would move the setup/update to an EC2 instance that would be started and stopped by a lambda.</p>
+<ul>
+<li>This would weed out any potential timeouts trying ot update the IP addresses directly from Lambda which as a 15 minute max time limit.</li>
+<li>If there was an error in updating, this would allow me to set an alarm and then trigger a second attempt or get a human involved.</li>
+</ul>
+</li>
+<li>
+<p>I would update the querying side of the project to take in IP ranges with CIDR e.g <code>a.b.c.0/24</code></p>
+</li>
+<li>
+<p>Lastly while I used <code>serverless</code> in this implementation, if I were to do it over I would concider using <code>aws-cdk</code> as my TypeScript library of choice as it is maintained directly from Amazon&#x27;s AWS team and builds the blueprints/templates for your stack.</p>
+</li>
+</ol>
+<p>An alternative if you don&#x27;t need a queryable service, is that the EC2 that runs to update the IP list rather than updating a DynamoDB you could simply update the WAF (web application firewall) in front of your infrastructurer.</p>]]></content:encoded>
+            <author>john.weland@gmail.com (John Weland)</author>
+        </item>
+    </channel>
+</rss>
