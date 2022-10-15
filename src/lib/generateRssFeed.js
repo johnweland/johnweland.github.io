@@ -6,7 +6,7 @@ import { getAllArticles } from './getAllArticles'
 
 export async function generateRssFeed() {
   let articles = await getAllArticles()
-  let siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  let siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://johnweland.me'
   let author = {
     name: 'John Weland',
     email: 'john.weland@gmail.com',
