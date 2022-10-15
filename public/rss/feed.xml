@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>John Weland</title>
-        <link>undefined</link>
+        <link>https://johnweland.me</link>
         <description>All of my long-form thoughts on programming, leadership, project architecture, and more, collected in chronological order.</description>
-        <lastBuildDate>Sat, 15 Oct 2022 18:28:33 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 15 Oct 2022 18:43:42 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
             <title>John Weland</title>
-            <url>undefined/favicon.ico</url>
-            <link>undefined</link>
+            <url>https://johnweland.me/favicon.ico</url>
+            <link>https://johnweland.me</link>
         </image>
         <copyright>All rights reserved 2022</copyright>
         <item>
             <title><![CDATA[Architecture of a Microservice]]></title>
-            <link>undefined/articles/architecture-of-a-microservice</link>
-            <guid>undefined/articles/architecture-of-a-microservice</guid>
+            <link>https://johnweland.me/articles/architecture-of-a-microservice</link>
+            <guid>https://johnweland.me/articles/architecture-of-a-microservice</guid>
             <pubDate>Sun, 08 Aug 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[It is not uncommon these days to have a potential employer put your skills to the test with a code challenge. Typically, in my experience, this is a smaller task or set of tasks and they expect you do perform live over the course of a few minutes to an hour.
 
