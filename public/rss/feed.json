@@ -1,23 +1,12 @@
 {
     "version": "https://jsonfeed.org/version/1",
     "title": "John Weland",
-    "feed_url": "undefined/rss/feed.json",
+    "home_page_url": "https://johnweland.me",
+    "feed_url": "https://johnweland.me/rss/feed.json",
     "description": "All of my long-form thoughts on programming, leadership, project architecture, and more, collected in chronological order.",
-    "icon": "undefined/favicon.ico",
+    "icon": "https://johnweland.me/favicon.ico",
     "author": {
         "name": "John Weland"
     },
-    "items": [
-        {
-            "id": "undefined/articles/architecture-of-a-microservice",
-            "content_html": "<p>It is not uncommon these days to have a potential employer put your skills to the test with a code challenge. Typically, in my experience, this is a smaller task or set of tasks and they expect you do perform live over the course of a few minutes to an hour.</p>\n<p>This was the first time I had -- had a code challenge that was not live and where the expected turnaround was approximately a week of development time.</p>\n<h2>The Project Description</h2>\n<blockquote>\n<p> \nThe goal of this exercise is to iterate on the development and deployment of a “cloud native” service in AWS that can be invoked to check a set of IP address lists for every single attempted phone call placed on our network, as part of a larger fraud detection system.If the IP address is listed in any sources, then they should be returned.</p>\n<p>The service will retrieve and automatically update from <a href=\"https://github.com/firehol/blocklist-ipsets\">https://github.com/firehol/blocklist-ipsets</a> without any manual intervention.\n </p>\n</blockquote>\n<ul>\n<li>Deliverables should include everything needed to deploy(and maintain) the service in a production AWS account.</li>\n<li>Code should be developed in Typescript or Java, and only make the assumption all developers run a macOS development environment.</li>\n<li>Bonus points for high availability deployments, benchmarks, and telemetry.</li>\n</ul>\n<h2>What I built</h2>\n<p>I was up to this point relatively green when it came to <a href=\"https://aws.amazon.com/\">AWS</a>. I chose to break my project into two parts; the first was a scheduled job that would run on Lambda to pull from the <a href=\"https://github.com/firehol/.blocklist-ipsets\">Firehol</a> list and update DynamoDB as needed.</p>\n<p>The second part was a Lambda that was invoked via API Gateway to query the passed input (IP Address)from DynamoDB. Then return a JSON payload including information like &quot;is the IP on a block list&quot;? &quot;Where is the IP from geographically&quot;?</p>\n<h2>What I would do differently</h2>\n<p>While my deployment worked, if I had to do it over again; I could keep a queryable service with something like this.</p>\n<ol>\n<li>\n<p>I would move the setup/update to an EC2 instance that would be started and stopped by a lambda.</p>\n<ul>\n<li>This would weed out any potential timeouts trying ot update the IP addresses directly from Lambda which as a 15 minute max time limit.</li>\n<li>If there was an error in updating, this would allow me to set an alarm and then trigger a second attempt or get a human involved.</li>\n</ul>\n</li>\n<li>\n<p>I would update the querying side of the project to take in IP ranges with CIDR e.g <code>a.b.c.0/24</code></p>\n</li>\n<li>\n<p>Lastly while I used <code>serverless</code> in this implementation, if I were to do it over I would concider using <code>aws-cdk</code> as my TypeScript library of choice as it is maintained directly from Amazon&#x27;s AWS team and builds the blueprints/templates for your stack.</p>\n</li>\n</ol>\n<p>An alternative if you don&#x27;t need a queryable service, is that the EC2 that runs to update the IP list rather than updating a DynamoDB you could simply update the WAF (web application firewall) in front of your infrastructurer.</p>",
-            "url": "undefined/articles/architecture-of-a-microservice",
-            "title": "Architecture of a Microservice",
-            "summary": "It is not uncommon these days to have a potential employer put your skills to the test with a code challenge. Typically, in my experience, this is a smaller task or set of tasks and they expect you do perform live over the course of a few minutes to an hour.\n\nThis was the first time I had -- had a code challenge that was not live and where the expected turnaround was approximately a week of development time.",
-            "date_modified": "2021-08-08T00:00:00.000Z",
-            "author": {
-                "name": "John Weland"
-            }
-        }
-    ]
+    "items": []
 }
