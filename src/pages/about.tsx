@@ -64,7 +64,7 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I am a Solutions Architect with over 9 years of experience in
+                I am a Solutions Architect with over 10 years of experience in
                 software engineering. I have worked with a variety of clients
                 across an array of org structures. Everything from defense
                 contracting to fresh startups.
@@ -91,9 +91,9 @@ export default function About() {
                 &#40;JCAPS&#41;.
               </p>
               <p>
-                I also volunteer at my communty garden and currently running for
-                City Council in hopes of getting things accomplished in our
-                small community.
+                I also volunteer at my communty garden and act as the technology
+                advisor for our City Council. I am a firm believer in giving
+                back to my community.
               </p>
             </div>
           </div>

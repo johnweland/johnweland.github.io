@@ -132,19 +132,29 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Rural Sourcing Inc.',
-      title: 'Solutions Architect',
-      logo: '/images/logos/rsi.webp',
-      start: '2021',
+      company: 'Protagona',
+      title: 'Sr. Cloud Engineer + Architect',
+      logo: '/images/logos/protagona.webp',
+      linkedin: 'https://www.linkedin.com/company/protagona',
+      start: '2023',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
       },
     },
     {
+      company: 'Sparq',
+      title: 'Sr. Cloud Engineer',
+      logo: '/images/logos/sparq.webp',
+      linkedin: 'https://www.linkedin.com/company/teamsparq/',
+      start: '2021',
+      end: '2023',
+    },
+    {
       company: 'FluentStream',
       title: 'Developer II',
       logo: '/images/logos/fluentstream.webp',
+      linkedin: 'https://www.linkedin.com/company/fluentstream-technologies/',
       start: '2021',
       end: '2021',
     },
@@ -152,6 +162,7 @@ function Resume() {
       company: 'ICSolutions',
       title: 'Software Engineer',
       logo: '/images/logos/ics.webp',
+      linkedin: 'https://www.linkedin.com/company/icsolutions/',
       start: '2015',
       end: '2021',
     },
@@ -159,6 +170,7 @@ function Resume() {
       company: 'Decypher Technologies',
       title: 'DOD Consultant',
       logo: '/images/logos/decypher.webp',
+      linkedin: 'https://www.linkedin.com/company/decypher/',
       start: '2013',
       end: '2015',
     },
@@ -186,7 +198,9 @@ function Resume() {
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
               <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                {role.company}
+                <a href={role.linkedin} className="hover:underline">
+                  {role.company}
+                </a>
               </dd>
               <dt className="sr-only">Role</dt>
               <dd className="text-xs text-zinc-500 dark:text-zinc-400">
@@ -255,7 +269,7 @@ export default function Home({ articles }) {
         </title>
         <meta
           name="description"
-          content="I am John a Solutions Architect with over 9 years of experience in
+          content="I am John a Solutions Architect with over 10 years of experience in
           software engineering. I have worked with a variety of clients across
           an array of org structures. Everything from defense contracting to
           fresh startups."
@@ -267,7 +281,7 @@ export default function Home({ articles }) {
             Solutions Architect, Software Engineer, Entrepreneur
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I am a Solutions Architect with over 9 years of experience in
+            I am a Solutions Architect with over 10 years of experience in
             software engineering. I have worked with a variety of clients across
             an array of org structures. Everything from defense contracting to
             fresh startups. I have no qualms about automating myself out of a
