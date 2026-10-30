@@ -17,9 +17,7 @@ const modeScript = `
       document.documentElement.classList.remove('dark')
     }
 
-    if (isDarkMode === isSystemDarkMode) {
-      delete window.localStorage.isDarkMode
-    }
+
   }
 
   function disableTransitionsTemporarily() {
@@ -40,18 +38,8 @@ export default function Document() {
     <Html className="h-full antialiased" lang="en">
       <Head>
         <script dangerouslySetInnerHTML={{ __html: modeScript }} />
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          href={`${process.env.NEXT_PUBLIC_SITE_URL}/rss/feed.xml`}
-        />
-        <link
-          rel="alternate"
-          type="application/feed+json"
-          href={`${process.env.NEXT_PUBLIC_SITE_URL}/rss/feed.json`}
-        />
       </Head>
-      <body className="flex h-full flex-col bg-zinc-50 dark:bg-black">
+      <body>
         <Main />
         <NextScript />
       </body>
