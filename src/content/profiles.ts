@@ -44,6 +44,7 @@ const person = {
 export const profiles: IdentityProfile[] = [
   {
     ...person,
+    public: true,
     slug: 'protagona',
     organization: 'Protagona',
     title: 'Solutions Architect',
@@ -61,6 +62,7 @@ export const profiles: IdentityProfile[] = [
   },
   {
     ...person,
+    public: true,
     slug: 'council',
     organization: 'Jackson City Council',
     title: 'City Council Member · Ward 2',
@@ -89,6 +91,7 @@ export const profiles: IdentityProfile[] = [
   },
   {
     ...person,
+    public: true,
     slug: 'damnedcat',
     organization: 'Damned Cat Studio',
     email: 'jweland@damnedcat.studio',

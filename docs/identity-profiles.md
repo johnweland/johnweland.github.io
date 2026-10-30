@@ -8,7 +8,9 @@ each profile can configure a different photo.
 
 ## Preview and publication
 
-All six profiles currently have `public: false`. They are available in local
+Protagona, Council, and DCS have `public: true` and are included in normal
+production builds. CERT, JFDG, and JCAPS remain unpublished drafts. All six
+are available in local
 `npm run dev` at `/p/protagona`, `/p/council`, `/p/damnedcat`, `/p/cert`, `/p/jfdg`,
 and `/p/jcaps`. Run `npm run build:profiles` only for local static review. That
 artifact contains all drafts and must not be deployed. Normal `npm run build`
@@ -78,7 +80,7 @@ The company site uses Faktum (Light, SemiBold, WideBold). Those commercial font
 files have not been copied or hotlinked. The card uses a local Avenir/Segoe UI
 fallback with heavier, wider name treatment. Exact typography awaits an approved
 licensed webfont asset. The Jackson council profile now has its own verified civic theme. Remaining
-organization profiles stay neutral pending their own brand review. All profiles remain unpublished drafts.
+organization profiles stay neutral pending their own brand review. Protagona, Council, and DCS are enabled for production export; the remaining profiles stay drafts.
 
 ## Jackson City Council brand treatment
 
@@ -109,7 +111,7 @@ The website action goes to the official homepage, with separate Mayor & Council
 and Agendas & Minutes resource links. These are profile-specific public resources;
 no City Hall phone, personal email, street address, or meeting schedule has been
 copied into John's contact record. Existing vCard and QR behavior is retained.
-The profile remains an unpublished draft and is excluded from normal exports.
+The council profile is enabled for production export.
 
 ## Mobile browser chrome and safe areas
 
@@ -148,7 +150,7 @@ studio theme; the masthead/browser color stays #111827 in both appearances.
 The website and studio GitHub organization are linked from the studio's own site.
 No private email, phone, scheduling links, or personal socials are inferred. The
 existing user-approved Co-founder title is retained; no current CEO claim is added
-from the older company page. DCS remains an unpublished draft.
+from the older company page. DCS is enabled for production export.
 
 ## Owner-configured contact details
 
@@ -160,3 +162,7 @@ card and absence from other identities.
 DCS biography copy is also shown on the main About page. Its `includeBioInVCard`
 flag explicitly includes that biography in the vCard NOTE field; other identities
 do not opt in automatically. Notes use the same escaping and UTF-8 folding.
+
+`npm run build` runs a postbuild check verifying that every approved profile has
+exported HTML and no draft route is exported. CI runs the profile tests before
+building. Never set PROFILE_PREVIEW=true in the production workflow.

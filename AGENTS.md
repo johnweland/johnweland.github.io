@@ -60,3 +60,7 @@
 
 - Public site is one homepage. Community roles remain in src/content/site.ts and
   appear in the /#community section. Do not restore a separate /community route.
+
+- Production-enabled profiles: protagona, council, damnedcat. Others remain drafts.
+  npm run build runs scripts/verify-profile-export.mjs automatically. Never use
+  PROFILE_PREVIEW for the GitHub Pages deployment.

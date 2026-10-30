@@ -79,7 +79,7 @@ and past preparedness roles in Texas. Theme selection is stored locally; no
 analytics or third-party fonts are loaded. The homepage links directly to LinkedIn and GitHub through accessible logo links;
 there is no separate Contact page. Review current work history before launch.
 
-See `docs/architecture.md` and `AGENTS.md`. Identity layouts are now implemented as unpublished drafts; see
+See `docs/architecture.md` and `AGENTS.md`. Protagona, Council, and DCS profiles are enabled for production; the other profiles remain drafts; see
 `docs/identity-profiles.md`. Verified organization branding, NFC configuration,
 authentication, and administration remain future work. This
 phase does not change DNS or publish the replacement.
@@ -94,3 +94,7 @@ all drafts. Do not deploy this preview artifact. `npm run build` excludes drafts
 Configure approved public details in `src/content/profiles.ts`. Never store private
 contact information in this source file. Blank contact fields do not render.
 Run `npm test` for vCard isolation, UTF-8 folding, escaping, and publication checks.
+
+Production `npm run build` includes `/p/protagona`, `/p/council`, and `/p/damnedcat`.
+The postbuild check fails if an approved route is missing or a draft is exported.
+Commit and push these changes to trigger the existing GitHub Pages workflow.
