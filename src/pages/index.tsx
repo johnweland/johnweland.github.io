@@ -1,371 +1,201 @@
-// @ts-nocheck
-import Image from 'next/future/image'
-import Head from 'next/head'
-import Link from 'next/link'
-import clsx from 'clsx'
-
-import { Button } from '@/components/Button'
-import Terminal from '@/components/Terminal'
-import { Card } from '@/components/Card'
-import { Container } from '@/components/Container'
-import { TwitterIcon, GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
-// import image1 from '@/images/photos/image-1.jpg'
-// import image2 from '@/images/photos/image-2.jpg'
-// import image3 from '@/images/photos/image-3.jpg'
-// import image4 from '@/images/photos/image-4.jpg'
-// import image5 from '@/images/photos/image-5.jpg'
-import { generateRssFeed } from '@/lib/generateRssFeed'
-import { getAllArticles } from '@/lib/getAllArticles'
-import { formatDate } from '@/lib/formatDate'
-
-function MailIcon(props) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path
-        d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
-      />
-      <path
-        d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-    </svg>
-  )
-}
-
-function BriefcaseIcon(props) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path
-        d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
-      />
-      <path
-        d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-    </svg>
-  )
-}
-
-function ArrowDownIcon(props) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-
-function Article({ article }) {
-  return (
-    <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
-        {article.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
-      </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
-    </Card>
-  )
-}
-
-function SocialLink({ icon: Icon, ...props }) {
-  return (
-    <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-10 w-10 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
-    </Link>
-  )
-}
-
-function Newsletter() {
-  return (
-    <form
-      action="/thank-you"
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
-    >
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Stay up to date</span>
-      </h2>
-      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Get notified when I publish something new, and unsubscribe at any time.
-      </p>
-      <div className="mt-6 flex">
-        <input
-          type="email"
-          placeholder="Email address"
-          aria-label="Email address"
-          required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
-        />
-        <Button type="submit" className="ml-4 flex-none">
-          Join
-        </Button>
-      </div>
-    </form>
-  )
-}
-
-function Resume() {
-  let resume = [
-    {
-      company: 'Protagona',
-      title: 'Sr. Cloud Engineer + Architect',
-      logo: '/images/logos/protagona.webp',
-      linkedin: 'https://www.linkedin.com/company/protagona',
-      start: '2023',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
-    },
-    {
-      company: 'Sparq',
-      title: 'Sr. Cloud Engineer',
-      logo: '/images/logos/sparq.webp',
-      linkedin: 'https://www.linkedin.com/company/teamsparq/',
-      start: '2021',
-      end: '2023',
-    },
-    {
-      company: 'FluentStream',
-      title: 'Developer II',
-      logo: '/images/logos/fluentstream.webp',
-      linkedin: 'https://www.linkedin.com/company/fluentstream-technologies/',
-      start: '2021',
-      end: '2021',
-    },
-    {
-      company: 'ICSolutions',
-      title: 'Software Engineer',
-      logo: '/images/logos/ics.webp',
-      linkedin: 'https://www.linkedin.com/company/icsolutions/',
-      start: '2015',
-      end: '2021',
-    },
-    {
-      company: 'Decypher Technologies',
-      title: 'DOD Consultant',
-      logo: '/images/logos/decypher.webp',
-      linkedin: 'https://www.linkedin.com/company/decypher/',
-      start: '2013',
-      end: '2015',
-    },
-  ]
-
-  return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
-      </h2>
-      <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
-          <li key={roleIndex} className="flex gap-4">
-            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image
-                src={role.logo}
-                alt=""
-                width={40}
-                height={40}
-                className="h-7 w-7 rounded-full"
-                unoptimized
-              />
-            </div>
-            <dl className="flex flex-auto flex-wrap gap-x-2">
-              <dt className="sr-only">Company</dt>
-              <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                <a href={role.linkedin} className="hover:underline">
-                  {role.company}
-                </a>
-              </dd>
-              <dt className="sr-only">Role</dt>
-              <dd className="text-xs text-zinc-500 dark:text-zinc-400">
-                {role.title}
-              </dd>
-              <dt className="sr-only">Date</dt>
-              <dd
-                className="ml-auto text-xs text-zinc-500 dark:text-zinc-400"
-                aria-label={`${role.start.label ?? role.start} until ${
-                  role.end.label ?? role.end
-                }`}
-              >
-                <time dateTime={role.start.dateTime ?? role.start}>
-                  {role.start.label ?? role.start}
-                </time>{' '}
-                <span aria-hidden="true">—</span>{' '}
-                <time dateTime={role.end.dateTime ?? role.end}>
-                  {role.end.label ?? role.end}
-                </time>
-              </dd>
-            </dl>
-          </li>
-        ))}
-      </ol>
-      {/* <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button> */}
-    </div>
-  )
-}
-
-// function Photos() {
-//   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-
-//   return (
-//     <div className="mt-16 sm:mt-20">
-//       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-//         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
-//           <div
-//             key={image.src}
-//             className={clsx(
-//               'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
-//               rotations[imageIndex % rotations.length]
-//             )}
-//           >
-//             <Image
-//               src={image}
-//               alt=""
-//               sizes="(min-width: 640px) 18rem, 11rem"
-//               className="absolute inset-0 h-full w-full object-cover"
-//             />
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   )
-// }
-
-export default function Home({ articles }) {
+import Image from 'next/image'
+import { ArrowDown } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
+import { Seo } from '@/components/Seo'
+import { site, experience, communityRoles } from '@/content/site'
+export default function Home() {
   return (
     <>
-      <Head>
-        <title>
-          John Weland - Solutions Architect, Father, Husband, and Entrepreneur.
-        </title>
-        <meta
-          name="description"
-          content="I am John a Solutions Architect with over 10 years of experience in
-          software engineering. I have worked with a variety of clients across
-          an array of org structures. Everything from defense contracting to
-          fresh startups."
-        />
-      </Head>
-      <Container className="mt-9">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Solutions Architect, Software Engineer, Entrepreneur
-          </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I am a Solutions Architect with over 10 years of experience in
-            software engineering. I have worked with a variety of clients across
-            an array of org structures. Everything from defense contracting to
-            fresh startups. I have no qualms about automating myself out of a
-            job.
-          </p>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            In leadership roles, my responsibility is as much to meeting the
-            client&apos;s needs as it is helping my team members grow in their
-            careers. To help them take on new and exciting challenges while
-            ensuring they have a healthy work-life balance.
-          </p>
-          <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://twitter.com/j_weland"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://github.com/johnweland"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://linkedin.com/in/johnweland"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
+      <Seo />
+      <div className="wrap">
+        <section className="home-hero">
+          <div className="eyebrow hero-eyebrow">
+            <span className="accent-dot" /> John Weland / Minnesota
           </div>
-        </div>
-      </Container>
-      <Container>
-        <div className="mx-auto">
-          <Terminal
-            className="py-24"
-            language="javascript"
-            name="cdk"
-            file="lib/notify-stack.ts"
-          >
-            {`import * as cdk from 'aws-cdk-lib';
-import * as sns from 'aws-cdk-lib/aws-sns';
-import * as subs from 'aws-cdk-lib/aws-sns-subscriptions';
-import * as sqs from 'aws-cdk-lib/aws-sqs';
-
-export class NotifyStack extends cdk.Stack {
-  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
-    super(scope, id, props);
-    const queue = new sqs.Queue(this, 'NotifyQueue', {
-      visibilityTimeout: cdk.Duration.seconds(300)
-    });
-    const topic = new sns.Topic(this, 'NotifyTopic');
-    topic.addSubscription(new subs.SqsSubscription(queue));
-  }
-}`}
-          </Terminal>
-        </div>
-      </Container>
-      {/* <Photos /> */}
-      <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
+          <h1>
+            Build useful things.
+            <br />
+            <span>Be useful to people.</span>
+          </h1>
+          <div className="hero-bottom">
+            <p>{site.intro}</p>
+            <div className="hero-actions">
+              <Button asChild>
+                <a href="#work">Explore my work</a>
+              </Button>
+              <a href="#about" className="text-link">
+                About me
+              </a>
+            </div>
+          </div>
+          <nav className="home-social-links" aria-label="Social profiles">
+            <Button asChild variant="ghost" size="icon">
+              <a
+                href={site.links.linkedin}
+                aria-label="John Weland on LinkedIn"
+              >
+                <LinkedInIcon
+                  className="h-5 w-5 fill-current"
+                  aria-hidden="true"
+                />
+              </a>
+            </Button>
+            <Button asChild variant="ghost" size="icon">
+              <a href={site.links.github} aria-label="John Weland on GitHub">
+                <GitHubIcon
+                  className="h-5 w-5 fill-current"
+                  aria-hidden="true"
+                />
+              </a>
+            </Button>
+          </nav>
+          <div className="hero-foot">
+            <span className="eyebrow">Cloud architecture. Local service.</span>
+            <a href="#about" aria-label="Scroll to about John">
+              <ArrowDown size={19} />
+            </a>
+          </div>
+        </section>
+        <section
+          id="about"
+          className="home-about section-block"
+          aria-labelledby="about-heading"
+        >
+          <div className="about-grid">
+            <div className="portrait">
+              <Image
+                src="/images/john-weland.webp"
+                alt="John Weland"
+                width={900}
+                height={1200}
+                sizes="(max-width: 720px) calc(100vw - 40px), 380px"
+              />
+            </div>
+            <div className="body-copy">
+              <p className="eyebrow">About</p>
+              <h2 id="about-heading">Hi, I’m John.</h2>
+              <p>
+                I’m originally from Texas and now live in rural Minnesota with
+                my family. I’m a husband and a father. At home, conversations
+                about programming practices, new technology, or games sometimes
+                earn a patient smile and nod.
+              </p>
+              <p>
+                I’m a co-founder of Damned Cat Studio, bringing a software
+                engineer’s perspective to independent game development.
+              </p>
+              <p>
+                I enjoy making complex things understandable, finding
+                opportunities to automate, and helping teams grow. Meeting a
+                client’s needs and making room for a healthy life both matter to
+                me.
+              </p>
+              <a href="#community" className="text-link">
+                My community involvement
+              </a>
+            </div>
+          </div>
+        </section>
+        <section
+          id="work"
+          className="section-block"
+          aria-labelledby="work-heading"
+        >
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Professional work</p>
+              <h2 id="work-heading">Cloud architecture & engineering.</h2>
+            </div>
+          </div>
+          <p className="work-summary">
+            I work with AWS architecture, cloud migrations, infrastructure as
+            code, and software engineering. My focus is on systems that teams
+            can understand, operate, and maintain.
+          </p>
+          <div className="home-work-details">
+            <div className="body-copy">
+              <h3>How I approach the work</h3>
+              <p>
+                Security, compliance, cost, and operational needs are part of
+                the architecture from the start. I aim to leave teams with
+                systems they can own and maintain.
+              </p>
+              <p>
+                I’ve worked with organizations ranging from defense contractors
+                to startups. Listening to the team and understanding the problem
+                come first.
+              </p>
+            </div>
+            <div>
+              <h3>Experience</h3>
+              <ol
+                className="home-experience"
+                aria-label="Professional experience"
+              >
+                {experience.map((job) => (
+                  <li className="home-experience-row" key={job.company}>
+                    <div>
+                      <h4>{job.company}</h4>
+                      <p>{job.role}</p>
+                    </div>
+                    <span>{job.period}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </section>
+        <section
+          id="community"
+          className="home-community section-block"
+          aria-labelledby="community-heading"
+        >
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Community</p>
+              <h2 id="community-heading">Serving the place I call home.</h2>
+            </div>
+          </div>
+          <p className="work-summary">
+            My work in Jackson includes elected service, public infrastructure,
+            and animal welfare. My background in emergency preparedness began in
+            Texas.
+          </p>
+          <div className="home-community-grid">
+            {communityRoles.map((item) => (
+              <article className="community-entry" key={item.organization}>
+                <p className="eyebrow">{item.category}</p>
+                <h3>{item.organization}</h3>
+                <p className="role-title">{item.role}</p>
+                <p className="role-status">{item.status}</p>
+                <div className="community-entry-copy">
+                  {item.paragraphs.map((text) => (
+                    <p key={text}>{text}</p>
+                  ))}
+                </div>
+                {item.href && (
+                  <a className="text-link" href={item.href}>
+                    {item.linkLabel}
+                  </a>
+                )}
+              </article>
             ))}
           </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            {/* <Newsletter /> */}
-            <Resume />
-          </div>
-        </div>
-      </Container>
+        </section>
+      </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: site.name,
+            url: site.url,
+            sameAs: [site.links.github, site.links.linkedin],
+          }),
+        }}
+      />
     </>
   )
-}
-
-export async function getStaticProps() {
-  if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed()
-  }
-
-  return {
-    props: {
-      articles: (await getAllArticles())
-        .slice(0, 4)
-        .map(({ component, ...meta }) => meta),
-    },
-  }
 }
