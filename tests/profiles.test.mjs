@@ -59,14 +59,21 @@ test('each identity exports only its own configured details', () => {
     }
   }
 })
-test('all six drafts are excluded from production exports by default', () => {
+test('production exports include approved profiles and exclude drafts', () => {
   const oldNode = process.env.NODE_ENV,
     oldPreview = process.env.PROFILE_PREVIEW
   try {
     process.env.NODE_ENV = 'production'
     delete process.env.PROFILE_PREVIEW
     assert.equal(profiles.length, 6)
-    assert.equal(profiles.filter(canRenderProfile).length, 0)
+    assert.deepEqual(
+      profiles.filter(canRenderProfile).map((p) => p.slug),
+      ['protagona', 'council', 'damnedcat']
+    )
+    assert.deepEqual(
+      profiles.filter((p) => !canRenderProfile(p)).map((p) => p.slug),
+      ['cert', 'jfdg', 'jcaps']
+    )
     process.env.PROFILE_PREVIEW = 'true'
     assert.equal(profiles.filter(canRenderProfile).length, 6)
   } finally {

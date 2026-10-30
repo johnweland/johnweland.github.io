@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "node --test tests/*.test.mjs",
-    "build:profiles": "PROFILE_PREVIEW=true next build --webpack"
+    "build:profiles": "PROFILE_PREVIEW=true next build --webpack",
+    "postbuild": "node scripts/verify-profile-export.mjs"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
